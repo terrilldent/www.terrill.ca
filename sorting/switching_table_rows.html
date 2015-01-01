@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Terrill Dent | Switching HTML Table Rows with JavaScript</title>
+<link rel="stylesheet" href="../../style.css" />
+<link rel="stylesheet" type="text/css" href="pretty.css" />
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+<div>
+    <div class="content">
+        <div class="header">
+            <h1><a href="/">Terrill Dent</a></h1>
+            <div class="nav-content">
+                <a class="nav-link" href="/"><span>Trends Blog</span></a>
+                <a class="nav-link current" href="/about/"><span>About</span></a>
+                <a class="nav-link" href="/illustrations/"><span>Illustrations Book</span></a>
+                <a class="nav-link" href="/projects/"><span>Projects</span></a>
+            </div>
+        </div>
+
+
+			
+	<h2>Switching the rows of an HTML table</h2>
+	<p>This tutorial illustrates a number of ways to switch two rows in an HTML table using JavaScript. The techniques used here are used in the <a href="/sorting/">TSorter</a> HTML table sorting function. </p>
+	<ul>
+		<li><a href="#basic_parts">Ensuring a successful swap</a></li>
+		<li><a href="#examples">Examples</a></li>
+		<li><a href="#samples">Full code samples</a></li>
+	</ul>
+	
+	<h3 id="basic_parts">Ensuring a successful row swap</h3>
+	<p>There are two important cases which should be considered when attempting to swap two table rows.</p>
+	
+	<p><strong>Consecutive Rows.</strong> The two easy cases appear when one element is directly above or below the other. Depending on the size of your table this could be very common or relatively rare.</p> 
+	
+	<h4 class="code_title">Swapping two consecutive rows</h4>
+<pre><code>
+oTable.tBodies[0].insertBefore(oRowI, oRowJ);
+</code></pre>
+
+<p><strong>None-Consecutive Rows.</strong> Here we replace row j with row i saving row j to a temporary variable. Normally we could go ahead and insert the temp. row back into the table before row I, however if row I happened to be the last row of the table it will now be undefined. So we check if it is defined and then act accordingly.</p> 
+<h4 class="code_title">Swapping two non-consecutive rows </h4>
+<pre><code>
+var tmpNode = oTable.tBodies[0].replaceChild(trs[i], trs[j]);
+
+if(typeof(trs[i]) != "undefined"){
+	oTable.tBodies[0].insertBefore(tmpNode, trs[i]);
+}else{
+	oTable.appendChild(tmpNode);
+}
+</code></pre>
+<p>The execution order you choose for the cases is important.  If you use this in a sorting function it may be called thousands of times during a single Sort() function call. You want to make sure that the most commonly used case appears first.</p>
+
+<h3 id="examples">Example</h3>
+
+<p>
+<form>
+	<label for="rowi">Row I</label>
+	<input type="text" id="rowi" value="1"/>
+	<label for="rowj">Row J</label>
+	<input type="text" id="rowj" value="4"/>
+	<input type="button" value="Swap Rows" onclick="exchange()" />
+</form>
+&nbsp;
+</p>
+
+<table id="housing_table_1" class="sortable">
+	<thead>
+		<tr>
+			<th abbr="link">ID</th>
+			<th abbr="input_text">NAME</th>
+			<th abbr="image_number">PRICE</th>
+			<th>LATITUDE</th>
+			<th>LONGITUDE</th>
+			<th abbr="link">ADDRESS</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=12995'>0</a></td>
+			<td class='in_cell'><input type='text' value='tom' /></td>
+			<td>300</td>
+			<td>43.474207</td>
+			<td>-80.588992</td>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=12995'>722 Cedar Bend Drive,</a></td>
+		</tr>
+		<tr>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=12999'>1</a></td>
+			<td class='in_cell'><input type='text' value='mark' /></td>
+			<td>300</td>
+			<td>43.441901</td>
+			<td>-80.584129</td>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=12999'>12-634 Erb St. West, </a></td>
+		</tr>
+		<tr>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=13107'>2</a></td>
+			<td class='in_cell'><input type='text' value='george' /></td>
+			<td>200</td>
+			<td>43.487166</td>
+			<td>-80.541454</td>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=13107'>511 Albert Street, Waterloo, ON</a></td>
+		</tr>
+		<tr>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=13135'>3</a></td>
+			<td class='in_cell'><input type='text' value='stu' /></td>
+			<td>450</td>
+			<td>43.458424</td>
+			<td>-80.553416</td>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=13135'>55 McCarron Crescent, </a></td>
+		</tr>
+		<tr>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=13164'>4</a></td>
+			<td class='in_cell'><input type='text' value='fred' /></td>
+			<td>300</td>
+			<td>43.440581</td>
+			<td>-80.517814</td>
+			<td><a href='http://peanut.uwaterloo.ca/ochousing2/dresults.asp?rid=13164'>128-51 Paulander Dr, </a></td>
+		</tr>
+	</tbody>
+</table>
+
+<h3 id="samples">Full code samples</h3>
+<h4 class="code_title">Passing the numerical Row Indices and target Table ID </h4>
+<pre><code>
+function exchange(i, j, tableID)
+{
+	var table = document.getElementByID('tableID');
+	var trs = oTable.tBodies[0].getElementsByTagName("tr");
+	
+	if(i == j+1) {
+		oTable.tBodies[0].insertBefore(trs[i], trs[j]);
+	} else if(j == i+1) {
+		oTable.tBodies[0].insertBefore(trs[j], trs[i]);
+	} else {
+		var tmpNode = oTable.tBodies[0].replaceChild(trs[i], trs[j]);
+		if(typeof(trs[i]) != "undefined") {
+			oTable.tBodies[0].insertBefore(tmpNode, trs[i]);
+		} else {
+			oTable.appendChild(tmpNode);
+		}
+	}
+}
+</code></pre>
+
+<p>The  above examples could be enhanced using the $()  function in the Prototype JavaScript library. If you are table does not have a differentiation between header, footer or body cells then the <code>tBodies[0]</code> references may also be ommited.</p>
+
+<h4 class="code_title">Passing in the Row  and Table Objects</h4>
+<pre><code>
+function exchange(oRowI, oRowJ, oTable)
+{	
+	if(oRowI.rowIndex == oRowJ.rowIndex+1) {
+		oTable.insertBefore(oRowI, oRowJ);
+	} else if(oRowJ.rowIndex == oRowI.rowIndex+1) {
+		oTable.insertBefore(oRowJ, oRowI);
+	} else {
+		var tmpNode = oTable.replaceChild(oRowI, oRowJ);
+		if(typeof(oRowI) != "undefined") {
+			oTable.insertBefore(tmpNode, oRowI);
+		} else {
+			oTable.appendChild(tmpNode);
+		}
+	}
+}
+</code></pre>
+	
+    </div>
+</div>
+
+    <script src="swap_example.js" type="text/javascript"></script>
+    <script src="/mint/?js" type="text/javascript"></script>
+</body>
+</html>

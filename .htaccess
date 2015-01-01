@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/(.*)$ /post.php?id=$1 [L]
+
+# Block Browsing Git Directories
+RedirectMatch 404 /\.git
+
+# Old Blog Redirects
+RedirectMatch permanent ^/blog$ http://www.terrill.ca/
+RedirectMatch permanent ^/blog/$ http://www.terrill.ca/

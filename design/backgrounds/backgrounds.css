@@ -1,0 +1,17 @@
+#background_example{
+	height:300px;
+	width:auto;
+	display:block;
+	background-image:url(images/34.gif);
+	background-color:#555;
+	border:solid 3px #333333;
+	}
+#thumbnails h4{
+	margin:0;
+	}
+#thumbnails img{
+	cursor:pointer;
+	padding:0;
+	background-color:#333333;
+    margin: 5px;
+	}

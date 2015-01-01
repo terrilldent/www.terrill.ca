@@ -1,0 +1,64 @@
+
+.faux_button {
+	background:url(/images/faux_button_states_wide.png) no-repeat top center;
+	height:26px;
+	padding:5px 0 0 0;
+	margin:5px auto;
+	width:160px;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	color:#FFF;
+	clear:both;
+	cursor:pointer;
+	text-decoration:none;
+	}
+	.faux_button:hover {
+		background:url(/images/faux_button_states_wide.png) no-repeat center -31px;
+		text-decoration:underline;
+		}
+	.faux_button:active {
+		background:url(/images/faux_button_states_wide.png) no-repeat center -62px;
+		text-decoration:none;
+		}
+/*------------------------TABLE-------------------------*/
+table.sortable{
+	border:1px solid #369;
+	font-family:Arial, Helvetica, sans-serif;
+	border-collapse:collapse;
+	}
+.sortable th.descend{background: #E4EDFC 95% 50% url('../images/caret_up.gif') no-repeat;}
+.sortable th.ascend{background: #E4EDFC 95% 50% url('../images/caret_down.gif') no-repeat;}
+.sortable th{
+	background-color: #E4EDFC;
+	border-bottom: 3px solid #336699;
+	border-right: 1px solid #336699;
+	cursor:pointer;
+	padding: 6px 15px 6px 6px;
+	text-align:left;
+	white-space: nowrap;
+	}
+.sortable td img{
+	padding:0 4px 0 0;
+	margin:0 0 -1px 0;
+	}
+.sortable td input,
+.sortable td.in_cell{
+	padding:0;
+	margin:0;
+	}
+.sortable td{
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	color: #222222;
+	font-size:.8em;
+	margin:0;
+	padding: 1px 6px 2px 7px;
+	white-space: nowrap;
+	text-align:left;
+	vertical-align:top;
+	}
+/*----------------------TABLE COLUMNS--------------------*/
+col#integrate{background-color:#eeffee;}
+col#skip{background-color:#ffffee;}
+col#exclude{background-color:#ffeeee;}

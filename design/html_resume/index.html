@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Terrill Dent - HTML Resumes</title>
+<link rel="stylesheet" href="../../style.css" />
+<link rel="stylesheet" type="text/css" href="backgrounds.css" />
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+<div>
+    <div class="content">
+        <div class="header">
+            <h1><a href="/">Terrill Dent</a></h1>
+            <div class="nav-content">
+                <a class="nav-link" href="/"><span>Trends Blog</span></a>
+                <a class="nav-link" href="/about/"><span>About</span></a>
+                <a class="nav-link" href="/illustrations/"><span>Illustrations Book</span></a>
+                <a class="nav-link" href="/projects/"><span>Projects</span></a>
+            </div>
+        </div>
+
+        <!--<span class="date">2007-03-19</span>-->
+        <h2>Creating a Killer HTML Resume</a></h2><p>Each term thousands of co-op students at the University of Waterloo search for a new job. Every one of them must create an HTML version of their resume for use (abuse?) in Jobmine, our online job matching machine.</p>
+		<p>Most will use MS Word, or worse, and old version of Netscape Composer. Luckily HTML isn&#039;t PostScript and can be learned and written quite easily. Having helped countless students with their HTML woes it&#039;s time to be proactive and provide the proper resources to help make your own HTML resume. One to be proud of.</p>
+		
+        <h3>0. Samples</h3>
+        <ul>
+            <li><a href="template_1.html">Template #1</a></li>
+            <li><a href="template_2.html">Template #2</a></li>
+            <li><a href="template_3.html">Template #3</a></li>
+            <li><a href="template_4.html">Template #4</a></li>
+            <li><a href="template_5.html">Template #5</a></li>
+        </ul>
+
+        <h3>1. Whitespace</h3>
+		<p>Your compulsion to preserve paper is noble, but it won&#039;t help you come evaluation time. If you&#039;re looking at your resume thinking - "There&#039;s a big white space, what can I put <em>there</em>?" resist the urge, and leave it blank. </p>
+		<p>Whitespace is important to the structure of a page. Try adding some vertical margin to your page headers. It will help separate sections and guide readers eyes.</p>
+		
+<pre><code>
+h2, h3 { margin-top:1em; }
+</code></pre>
+		<p>Take advantage of the CSS support in new browsers. Define a max-width value to cut down the line length to something more "paper" like. Newspapers have thin columns for a reason, you know.</p>
+		<pre><code>
+body { 
+margin:1em;
+max-width: 50em;
+}
+</code></pre>
+
+		<h3>2. Typography</h3>
+		<p>Consistency is key. Choose your font wisely. Pick one that is widely adopted, one the viewer is likely to have, and specify a backup just in case they don&#039;t. </p>
+		<p>Sometimes one font just won&#039;t due. If you must use a second keep it in the family!</p>
+	<p><strong>Serif fonts:</strong> Times New Roman, Georgia, Times, serif;<br />
+	<strong>Sans-Serif fonts:</strong> Arial, Helvetica,  Verdana,  Trebuchet MS, sans-serif </p>
+		<p>Increasing the line-height slightly can allow the piece to breath a little better. Use this in moderation.  </p>
+		<pre><code>
+body { 
+line-height: 1.4em;
+}
+</code></pre>
+        <p>Letter Spacing is one of the finer points, and when done properly goes completely un-noticed. Adjusting the space between letters and words can help alleviate some of the "squished" looked that bold titles often get.</p>
+<pre><code>
+h1,h2,h3,h4{
+letter-spacing: .06em;
+}
+</code></pre>
+		<p>Finally, make sure the default font size is sufficiently large to prevent reader eye strain. If you absolutely must prevent that line of text from wrapping then reword it! Don&#039;t decrease the font size. Remember to comb the final draft thoroughly for any sizing inconsistencies.</p>
+		
+		
+		<h3>3. Readability</h3>
+		<p>Yes, there&#039;s more to readability than having the perfect font for the job. You need to make sure that the reader understands exactly what you mean. </p>
+		
+		<p>Acronoyms and abbreviations are also a common place of fault. All too often I see an acronym such as NHMFL, and I think "sounds impressive, but I have no <em>clue</em> what it means"  (turns out it stands for "National High Magnetic Field Laboratory"). Acronyms are pronounced as a word, while abbreviations are spelled. </p>
+		<p>You have the ability to give the reader hints with HTML. Use this whenever you can! </p>
+		<pre><code>
+&lt;acronym title="Document Object Model"&gt;DOM&lt;/acronym&gt;
+
+&lt;abbr title=&quot;PHP Hypertext Preprocessor&quot;&gt;PHP&lt;/abbr&gt;	
+</code></pre>
+		<h3>4. Colour. Everything in moderation</h3>
+		<p>You can&#039;t be too conservative when it comes to colour on a resume. Subtle variations from white or black work best. Stay away from colours which could elicit bad reactions from the reader. Be aware of common <a href="http://iit.bloomu.edu/vthc/Design/psychology.htm">moods associated with colours</a>. I would limit yourself to Black + 1 colour, if you must. Grey is useful for denoting less important or suplimental information. Doing this has the added benefit of making pure black text stand out more. Subtle gradients, or preferably none at all. No <a href="http://terrill.ca/posts/backgrounds/">patterns</a>. Even solids blocks of non-white are rarely a good idea.</p>
+		<p>Keep in mind that when it comes time to print, the design will likely be reduced to black and white.  </p>
+		<p>Oh, and unless you&#039;re applying for a job at a morgue... it&#039;s best not to use light text on a dark background. </p>
+		
+		<h3>5. Borders and Underlines</h3>
+		<p>They are  often used (and abused) to create structure on a page. When used correctly they can be icing on the  cake, but all too often people end up with a broken box effect (or worse yet <em>parrallelograms!</em>).</p>
+		<p>Use both sparingly, and consistently (have I mentioned Consistency is key?). If one job title is underlined, then every job title better be underlined. Use the thickness of the border to denote the importance of division. Don't be affraid to use different border styles &ndash; they can have a very elegant effect. </p>
+		<pre><code>
+h2 {
+border-bottom: 1px dotted #999999;
+}
+</code></pre>	
+		
+		
+		<h3>6. Graphics, if you dare</h3>
+		
+		<p>There are a few acceptable opportunities to use a graphic in your resume. </p>
+		<ol>
+    		<li>Custom bullets for  lists can give it some flair. They allow you to be expressive, yet still functional. </li>
+    		<li>A graphic at the end of the resume to indicate to the reader they have reached the end. The reader will also know they've not missed a page; something that can easily happen when printing out numerous resumes. </li>
+    	</ol>
+		<h3>7. Check other browsers</h3>
+		<p>For numerous reasons your resume is likely to be opened in a Microsoft browser. Clicking a link in most MS programs pops open IE 6 or 7. A companies IT department may restrict which browser people use. <em>Jobmine may restrict what browser people use.</em> The list goes on. Long story short; install as many of these browsers as you can, and make sure that it looks good on screen, and in the print preview. If you don't have access to one of these listed, ask a friend who does.</p>
+		
+		<ul>
+		<li><a href="http://www.mozilla.com/en-US/firefox/">Firefox</a></li>
+		<li><a href="http://www.microsoft.com/windows/ie/ie6/downloads/critical/ie6sp1/default.mspx">Internet Explorer 6</a></li>
+		<li><a href="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx">Internet Explorer 7</a></li>
+		<li><a href="http://www.opera.com/">Opera</a></li>
+		<li><a href="http://www.apple.com/macosx/features/safari/">Safari</a> (for those on a Mac)</li>
+		</ul>
+		
+		<h3>8. Print style sheet</h3>
+		<p>When you&#039;re finished creating your screen style sheet. Copy the entire thing into a new file that will be used for printing. Then you can start deleting things. Remove the max-width property you may have set earlier. Remove margins and padding on the outter most containers. Use all the available width of the page. Print is good like that &ndash; you get generous page padding by default.</p>
+		
+		<p>Next check the length. Does it fit on two pages? If not there is probably something in there that shouldn&#039;t be. Watch the number of applicants to the job your applying. A rule of thumb is; the fewer applicants, the more time they will take to read each resume, and the longer your resume may be. If your the hundreth person to apply then shorten it up. The evaluator will be greatful you did. </p>
+		
+		<h3>9. File Name</h3>
+		<p>On more than one occasion I have been given a group of resumes via email. I saved them all to my computer, and then proceeded to go through the list (ordered by file name). The first resumes always get the most attention. So, if your name is Zack (starts with a Z) don&#039;t name the file zack.html, instead try naming the file something that will put you at the front of the line.</p>
+		<h3>10. Be Distinctive, not Unorthodox</h3>
+		<p>You just <em>know</em> that every other person applying for your job will be reading this. So it&#039;s your job to use these tips uniquely to make your resume distinctive. It may not help you get an interview, but it will help you once you&#039;ve got one. <strong>Caution:</strong> an unorthodox resume will probably  get tossed out like yestedays lunch. If you&#039;re applying to a marketing position you&#039;ll have more slack, but you math/CS&#039;ers best be careful. </p>
+		
+
+
+<script async src="/mint/?js" type="text/javascript"></script>
+</body>
+</html>
+
+
+

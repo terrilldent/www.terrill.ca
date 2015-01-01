@@ -1,0 +1,216 @@
+
+/* ----------- Reset Styles --------- */
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,label,input,textarea,fieldset,p,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+a,a:active,a:focus,input,textarea{outline:none; text-decoration: none}
+td,th{vertical-align:top;text-align:left}
+img,iframe,fieldset{ border:none}
+ol,ul{list-style:none}
+li{list-style-type:none}
+h1,h2,h3,h4{font-size:100%;font-weight:normal}  
+
+/* ----- FONTS ------ */
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('fonts/Lato-Light.ttf');
+    }
+@font-face {
+    font-family: 'PtSerif-Bold';
+    src: url('fonts/PT_Serif/PT_Serif-Web-BoldItalic.ttf');
+    }
+@font-face {
+    font-family: 'PtSerif';
+    src: url('fonts/PT_Serif/PT_Serif-Web-Regular.ttf');
+    }
+
+
+/* ----- WIREFRAME ------ */
+
+
+.content {
+    max-width: 500px;
+    padding: 0 1em;    
+    margin: 0 auto;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    }
+.half-column {
+    width: 50%;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding: 1em;
+    }
+
+/* ----- HEADER ------ */
+
+.header {
+    text-align: center;
+    margin-bottom: 2em;
+    }
+    .nav-link {
+        padding: .2em .4em;
+        margin: 0 .3em;
+        white-space: nowrap;
+        }
+    .nav-link.current {
+        color: #000;
+        }
+
+/* ----- TYPOGRAPHY ------ */
+
+a:hover {
+	text-decoration: underline;
+    }
+
+body {
+    font-family: 'Lato-Light', Helvetica-Neue, Helvetica, Arial, Sans-serif;
+	font-size: 1.1em;
+	padding-bottom: 3em;
+    }
+
+h1 {
+    font-family: 'PtSerif', Georgia, Serif;
+	font-size: 1.6em;
+	padding: .6em 0;
+    margin: 0;
+    font-size: 2.5em;
+    }
+    h1 a{ 
+        color: #000;
+        }   
+
+h2 {
+    font-family: 'PtSerif-Bold', Georgia, Serif;
+	font-size: 1.5em;
+	padding: .3em 0;
+	margin: 1.5em 0 .4em;
+    }
+h2 a{
+    color: #000;
+    }
+h3 {
+    font-size: 1.5em;
+    margin: 1em 0 .5em 0;
+    }
+h4 {
+    font-size: 1.2em;
+    margin: 1em 0 .5em 0;
+    }
+
+p{
+	margin-bottom: 1em;
+    }
+
+.post li {
+	list-style-type: circle;
+	margin: .4em 0 .5em 1.5em;
+	}
+.post ul {
+	margin-bottom: 1em;
+	}
+.date {
+	margin: -.8em 0 1.5em 0;
+	font-size: .8em;
+	color: #333;
+	}
+
+.illustration-full{
+    width: 100%;
+    max-width: 500px;
+}
+
+/* --------- CODE EXAMPLES --------------*/
+.code_title{
+    display:block;
+    font-family: arial, sans-sarif;
+    font-size: .9em;
+    margin: 20px 20px 0 20px;
+    color:#FFFFFF;
+    padding:3px .5em;
+    background:#667285;
+    border:1px solid #667285;
+    }
+pre {
+    background:#eee;
+    border:1px solid #667285;
+    padding:0 1em 1em 1em;
+    margin: 0 20px 20px 20px;
+    overflow:auto;
+    }
+    pre code{
+        font-size:.8em;
+        font-family: Courier, "Lucida Console", monospace;
+        line-height:1.5em;
+        }
+    pre code var{
+        font-style:normal;
+        font-weight:bold;
+        }
+
+/* ----- PROJECT LIST ------ */
+
+.projects-list {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    }
+    .projects-list dt,
+    .projects-list dd{
+        padding: 1em 0;
+        display: inline-block;
+        vertical-align: top;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        }
+    .projects-list dt{
+        width: 30%;
+        }
+    .projects-list dd{
+        width: 69%;
+        padding-left: 2em;
+        }
+
+
+/* ----- ERROR PAGES ------ */
+
+.error-page {
+	text-align: center;
+	margin-top: 3em;
+	}
+
+/* ----- MEDIA ------ */
+
+@media all and (max-width: 550px) {
+
+    /* -- One Column Projects -- */
+    .projects-list dt,
+    .projects-list dd{
+        padding: 1em 0;
+        display: block;
+        width: auto;
+        }
+    .projects-list dt{
+        padding-bottom: 0;
+        color: #000;
+        }
+    .projects-list dd{
+        padding-top: .5em;
+        color: #444;
+        }
+
+    /* -- One Column About Me-- */
+    .half-column {
+        width: auto;
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 660px) {
+    .content {
+        max-width: auto;
+        padding: 0 1em;
+    }
+}
