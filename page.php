@@ -19,8 +19,8 @@ $page = mysql_real_escape_string( preg_replace( "/[^0-9]/", "", $_GET['page'] ) 
     		<div class="nav-content">
                 <a class="nav-link current" href="/"><span>Trends Blog</span></a>
                 <a class="nav-link" href="/about/"><span>About</span></a>
-    			<a class="nav-link" href="/illustrations/"><span>Illustrations Book</span></a>
                 <a class="nav-link" href="/projects/"><span>Projects</span></a>
+    			<a class="nav-link" href="/illustrations/"><span>Illustrations Book</span></a>
     		</div>
     	</div>
 <?php
