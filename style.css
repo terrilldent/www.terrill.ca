@@ -82,8 +82,12 @@ h1 {
     margin: 0;
     font-size: 2.5em;
     }
-    h1 a{ 
+    h1 a{
         color: #000;
+        }   
+    h1 a:hover{
+        color: #116;
+        text-decoration: none;
         }   
 
 h2 {
@@ -214,6 +218,27 @@ pre {
 
 @media all and (max-width: 550px) {
 
+    h1 {
+        font-size: 2em;
+
+    }
+    .header{
+        border-bottom: 1px solid #EEE;
+        padding-bottom: 1em;
+    }
+    .verbose{
+        display: none;
+    }
+    .nav-link {
+        padding: .2em .15em;
+        margin: 0 .3em;
+        white-space: nowrap;
+    }
+
+    h2 {
+        margin-top: 1em;
+    }
+
     /* -- One Column Projects -- */
     .projects-list dt,
     .projects-list dd{
@@ -223,6 +248,7 @@ pre {
         }
     .projects-list dt{
         padding-bottom: 0;
+        font-weight: bold;
         color: #000;
         }
     .projects-list dd{

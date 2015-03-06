@@ -17,10 +17,10 @@ $postID = preg_replace( "/[^0-9a-z_-]/", "", $_GET[ 'id' ] );
 	<div class="header">
         <h1><a href="/">Terrill Dent</a></h1>
 		<div class="nav-content">
-            <a class="nav-link current" href="/"><span>Trends Blog</span></a>
-            <a class="nav-link" href="/about/"><span>About</span></a>
-            <a class="nav-link" href="/projects/"><span>Projects</span></a>
-			<a class="nav-link" href="/illustrations/"><span>Illustrations Book</span></a>
+            <a class="nav-link current" href="/"><span class="verbose">Trends</span> Blog</a>
+            <a class="nav-link" href="/about/">About</a>
+            <a class="nav-link" href="/projects/">Projects</a>
+			<a class="nav-link" href="/illustrations/"><span class="verbose">Illustrations</span> Book</a>
 		</div>
 	</div>
 <?php
