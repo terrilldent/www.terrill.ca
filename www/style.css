@@ -313,7 +313,7 @@ pre {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) { 
     .icon{
         background-image: url(/img/icon_sprite@2x.png);
     }
