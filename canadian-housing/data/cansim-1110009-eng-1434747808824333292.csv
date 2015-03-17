@@ -1,0 +1,23 @@
+"Table 111-0009 Family characteristics, summary, annual(1,4,15,16,18)"
+Survey or program details:
+Annual Income Estimates for Census Families and Individuals (T1 Family File) - 4105
+Geography (19),Family characteristics,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012
+Canada,"Median employment income of families (dollars) (4,6,8,15,16,18)",48600,49900,51300,52100,53900,56000,58300,60500,62360,61050,62390,64730,66650
+Canada,"Median employment income of dual-earner couple families (dollars) (6,8,15)",62500,64200,66000,67500,69700,72000,74900,77570,80330,79920,81960,84710,87230
+"Toronto, Ontario [35535] ","Median employment income of families (dollars) (4,6,8,15,16,18)",55100,56100,56400,57000,58600,60000,61600,63690,64920,62790,63960,65900,67530
+"Toronto, Ontario [35535] ","Median employment income of dual-earner couple families (dollars) (6,8,15)",71100,72700,73400,75100,77100,78700,81000,83430,85670,84670,86740,88930,90970
+"Kitchener-Cambridge-Waterloo, Ontario [35541]  (13)","Median employment income of families (dollars) (4,6,8,15,16,18)",59700,61200,63400,64700,66200,67600,68900,70190,71710,68370,71400,73680,75540
+"Kitchener-Cambridge-Waterloo, Ontario [35541]  (13)","Median employment income of dual-earner couple families (dollars) (6,8,15)",70000,71600,74500,76300,78500,80300,82000,83690,86020,83770,87780,90420,93040
+Footnotes:
+1,"Information on the data source, the historical availability, definitions of the terms used, and the geographies available can be found at http://www.statcan.gc.ca/imdb-bmdi/4105-eng.htm. Because they are based on a different methodology, estimates of the number of Census families presented in this table differ from estimates produced by Demography Division. For questions and comments, contact income@statcan.gc.ca, Income Statistics Division, Client Services, Jean Talon Building, 5th Floor, Ottawa, Ontario K1A 0T6."
+4,"Families are comprised of: 1) couples (married or common-law, including same-sex couples) living in the same dwelling with or without children, and 2) single parents (male or female) living with one or more children. Persons who are not matched to a family become persons not in census families. They may be living alone, with a family to whom they are related, with a family to whom they are unrelated or with other persons not in census families. Beginning in 2001, same-sex couples reporting as couples are counted as couple families."
+6,"Median is the middle number in a group of numbers. Where a median income, for example, is given as $26,000, it means that exactly half of the incomes reported are greater than or equal to $26,000, and that the other half is less than or equal to the median amount. Median incomes in the data tables are rounded to the nearest hundred dollars. Zero values are not included in the calculation of medians for individuals."
+8,"Employment income includes wages and salaries, commissions from employment, training allowances, tips and gratuities, and net self-employment income (business, professional, commission, farming and fishing income)."
+13,"Saguenay, formerly Chicoutimi-Jonquière ; Greater Subdury, formerly Subdury ; Kitchener-Cambridge-Waterloo, formerly Kitchener ; Abbotsford-Mission, formerly Abbotsford ; Temiskaming Shores, formerly Haileybury."
+15,"A couple family consists of a couple living together (married or common-law, including same-sex couples) living at the same address with or without children. Beginning in 2001, same-sex couples reporting as couples are counted as couple families."
+16,"A lone-parent family is a family with only one parent, male or female, and with at least one child."
+18,"A person not in census families is an individual who is not part of a census family, couple family or lone-parent family. Persons not in census families may live with their married children or with their children who have children of their own. They may be living with a family to whom they are related or unrelated. They may also be living alone or with other persons not in census families."
+19,"The Census Standard Geographical Classification (SGC) is used for data dissemination of the Census Metropolitan Areas and the Census Agglomerations: from 1997 to 2001, SGC 1996; from 2002 to 2006, SGC 2001; from 2007 to 2011, SGC 2006; as of 2012, SGC 2011. Please note that Census Agglomerations were introduced in this CANSIM table in 2008."
+Source:
+"Statistics Canada. Table 111-0009 - Family characteristics, summary, annual (number unless otherwise noted)"
+"(accessed: February 03, 2015)"

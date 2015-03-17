@@ -30,7 +30,7 @@ h1,h2,h3,h4{font-size:100%;font-weight:normal}
 
 
 .content {
-    max-width: 500px;
+    max-width: 550px;
     padding: 0 1em;    
     margin: 0 auto;
     box-sizing:border-box;
@@ -53,6 +53,8 @@ h1,h2,h3,h4{font-size:100%;font-weight:normal}
 .header {
     text-align: center;
     margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #EEE;
     }
     .nav-link {
         padding: .2em .4em;
@@ -61,6 +63,19 @@ h1,h2,h3,h4{font-size:100%;font-weight:normal}
         }
     .nav-link.current {
         color: #000;
+        }
+    .icon{
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        margin: 0 .3em;
+        background: #000;
+        display: inline-block;
+        background: url( /img/icon_sprite.png ) no-repeat 0 0;
+        background-size: 32px 16px;
+        }
+    .icon.twitter{
+        background-position: -16px 0;
         }
 
 /* ----- TYPOGRAPHY ------ */
@@ -93,12 +108,12 @@ h1 {
 h2 {
     font-family: 'PtSerif-Bold', Georgia, Serif;
 	font-size: 1.5em;
-	padding: .3em 0;
-	margin: 1.5em 0 .4em;
+	margin: 2em 0 .6em;
+    clear: both;
     }
-h2 a{
-    color: #000;
-    }
+    h2 a{
+        color: #000;
+        }
 h3 {
     font-size: 1.5em;
     margin: 1em 0 .5em 0;
@@ -111,6 +126,11 @@ h4 {
 p{
 	margin-bottom: 1em;
     }
+
+p a{
+    color: #777;
+    text-decoration: underline;
+}
 
 .post li {
 	list-style-type: circle;
@@ -128,6 +148,28 @@ p{
 .illustration-full{
     width: 100%;
     max-width: 500px;
+}
+.boxed{
+    box-shadow: 0 1px 2px rgba( 0,0,0,.2 );
+}
+
+h2.inline{
+    clear: none;
+    margin-top: 1.5em;
+}
+
+.profile-photo{
+    width: 275px;
+    float:  left;
+    margin: 1.5em 1.5em 2em 0;
+}
+.social-link{
+    font-size: .85em;
+    padding-bottom: .3em;
+    display: block;
+}
+.social-link .icon{
+    vertical-align: middle;
 }
 
 /* --------- CODE EXAMPLES --------------*/
@@ -225,12 +267,13 @@ pre {
     .header{
         border-bottom: 1px solid #EEE;
         padding-bottom: 1em;
+        margin: 0 -1em;
     }
     .verbose{
         display: none;
     }
     .nav-link {
-        padding: .2em .15em;
+        padding: .2em .10em;
         margin: 0 .3em;
         white-space: nowrap;
     }
@@ -267,5 +310,11 @@ pre {
     .content {
         max-width: auto;
         padding: 0 1em;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .icon{
+        background-image: url(/img/icon_sprite@2x.png);
     }
 }

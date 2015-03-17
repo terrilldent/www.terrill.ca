@@ -24,7 +24,7 @@ body{
     
 @font-face {
     font-family: 'Lato-Light';
-    src: url('../../fonts/Lato-Light.ttf');
+    src: url('../../../fonts/Lato-Light.ttf');
     }
 
 /* --------------- HEADERS -------------- */

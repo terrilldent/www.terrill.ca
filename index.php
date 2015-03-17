@@ -16,10 +16,10 @@ include_once 'write/data/posts.php';
 	<div class="header">
         <h1><a href="/">Terrill Dent</a></h1>
 		<div class="nav-content">
-            <a class="nav-link current" href="/"><span class="verbose">Trends</span> Blog</a>
+            <a class="nav-link current" href="/">Blog</a>
             <a class="nav-link" href="/about/">About</a>
             <a class="nav-link" href="/projects/">Projects</a>
-            <a class="nav-link" href="/illustrations/"><span class="verbose">Illustrations</span> Book</a>
+            <a class="nav-link" href="/illustrations/">Illustrations</a>
 		</div>
 	</div>
 <?php
