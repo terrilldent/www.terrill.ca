@@ -88,11 +88,12 @@ nav{
     text-align: right;
 }
 .nav-link {
-    padding: 13px .4em 5px;
+    padding: 13px .4em 7px;
     margin: 0 .4em;
     white-space: nowrap;
     display: inline-block;
     position: relative;
+    vertical-align: top;
 
     &.current {
         color: #000;
@@ -101,7 +102,7 @@ nav{
             content:'';
             display: inline-block;
             position: absolute;
-            bottom: -2px;
+            bottom: 0px;
             right: 47%;
             background: #000;
             width: 4px;
@@ -256,6 +257,7 @@ footer{
     .profile-photo{
         display: inline-block;
         width: 120px;
+        height: 120px;
         float: left;
         border-radius: 60px;
         margin: 0 1em 1em 0;
@@ -348,7 +350,17 @@ pre {
 
     &.disabled{
         cursor: default;
-        color: #888;
+        color: #999;
+        background: #F5F5F5;
+        border-bottom: 1px solid #EEE;
+    }
+
+    &.tiny{
+        font-size: .8em;
+        text-transform: uppercase;
+        padding: 3px 6px;
+        box-shadow: none;
+        display: inline-block;
     }
 }
 
@@ -399,30 +411,98 @@ pre {
     margin-top: 3em;
 }
 
+/* ----- POPUP ------ */
+
+#popup-wrapper{
+    display: none;
+
+    &.show{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba( 0,0,0,.8);
+    }
+
+    .popup{
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+
 /* ----- MEDIA ------ */
 
+
+@media all and (max-width: 768px) {
+    .blog .main .wrapper,
+    .wrapper {
+        max-width: none;
+        padding: 0 3em 0 1.5em;
+    }
+    .blog .main .wrapper{
+        padding: 0;
+    }
+    .post-body{
+        margin-left: 2em;
+        margin-right: 2em;
+        padding: 1.5em;
+    }
+}
+
 @media all and (max-width: 550px) {
+    .blog .main .wrapper,
+    .wrapper {
+        max-width: none;
+        padding: 0 1em;
+        }
+    .blog .main .wrapper{
+        padding: 0;
+    } 
+    .main{
+        padding-top: 1em;
+    }
+    .post-body{
+        margin-left: 1em;
+        margin-right: 1em;
+        padding: 1em .6em 1em 1em;
+    }
     .header{
         border-bottom: 1px solid #EEE;
         padding-bottom: 1em;
-        padding: 10px;
-    }
-    .logo {
-        font-size: 1.3em;
-        text-align: center;
-        display: block;
-        float: none;
         padding: 10px 0;
+
+        .wrapper{
+            padding: 0;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            text-align: center;
+            display: block;
+            float: none;
+            padding: 10px 0;
+        }
+
+        nav{
+            clear: both;
+            text-align: center;
+        }
+        .nav-link {
+            padding: .2em .10em 7px;
+            margin: 0 .3em;
+            white-space: nowrap;
+        }
     }
-    nav{
-        clear: both;
-        text-align: center;
-    }
-    .nav-link {
-        padding: .2em .10em;
-        margin: 0 .3em;
-        white-space: nowrap;
-    }
+    
 
     h2 {
         margin-top: 1em;
@@ -465,13 +545,6 @@ pre {
         p{
             line-height: 1.5em;
         }
-    }
-}
-
-@media all and (max-width: 660px) {
-    .content {
-        max-width: auto;
-        padding: 0 1em;
     }
 }
 

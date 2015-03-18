@@ -74,12 +74,12 @@ illustrations = (function()
 
             miro.remove( bookPagesParent );
             while( bookPagesParent.firstElementChild ) {
-                console.log( bookPagesParent.firstElementChild );
+                //console.log( bookPagesParent.firstElementChild );
                 pages.push( createPage( bookPagesParent.firstElementChild, pageIndex ) );
                 pageIndex++;
             }
 
-            console.log( pages );
+            //console.log( pages );
 
             // Show the first page
             flip.init( $('all-pages'), $('flip-pages'), $('shadow'), pages[ 0 ] );

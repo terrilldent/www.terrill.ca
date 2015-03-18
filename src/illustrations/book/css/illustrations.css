@@ -13,6 +13,7 @@
     display: block;
     margin: 1%;
     font-size: .8em;
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 
@@ -25,14 +26,8 @@
             box-sizing:border-box;
 }
 
-
-@media all and (max-width: 599px) {
-    .illustration {
-        width: 98%;
-        height: 130px;
-        display: block;
-        background-position: center center;
-    }
+.illustration.contain{
+    background-size: contain;
 }
 
 @media all and (min-width: 600px)  {
@@ -48,9 +43,17 @@
         width: 34%;
         height: 46%;
     }
+    .med-three-one {
+        width: 98%;
+        height: 22%;
+    }
     .med-three-two {
         width: 98%;
         height: 46%;
+    }
+    .med-three-three {
+        width: 98%;
+        height: 70%;
     }
     .med-three-four {
         width: 98%;
@@ -63,5 +66,15 @@
     .med-one-four {
         width: 31%;
         height: 97%;
+    }
+
+}
+
+@media all and (max-width: 599px) {
+    .illustration {
+        width: 98%;
+        height: 130px;
+        display: block;
+        background-position: center center;
     }
 }

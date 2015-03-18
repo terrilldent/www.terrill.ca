@@ -23,6 +23,7 @@ module.exports = function( grunt ){
                           '**/*.php', 
                           '**/*.gif', 
                           '**/*.ico', 
+                          '**/*.js', 
                           '**/*.xml']
                 }]
              }
@@ -92,7 +93,7 @@ module.exports = function( grunt ){
             },
             clientjs: {
                 files: ['src/**/*.js'],
-                tasks: ['jslint']
+                tasks: ['jslint', 'copy']
             },
             clienthtml: {
                 files: ['src/**/*.html'],
