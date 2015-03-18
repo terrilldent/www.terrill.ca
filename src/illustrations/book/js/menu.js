@@ -1,10 +1,10 @@
 /*jslint bitwise: true, browser: true, continue: false, devel: true, plusplus: true, regexp: true, sloppy: true, white: true */
-/*global miro, $, document, window */
+/*global $, flip, illustrations, document, window */
 
 /* Copyright Terrill Dent, 2013 */
 
 
-var miro = miro || {};
+var miro = window.miro || {};
 
 miro.menu = (function()
 {
@@ -29,7 +29,7 @@ miro.menu = (function()
 
 
         // List
-        item = miro.create( 'div', { className : 'collection-item', textContent: 'Cover' } ),
+        item = miro.create( 'div', { className : 'collection-item', textContent: 'Cover' } );
         miro.button.create( item, function() {
             menu.hide();
             setTimeout( function() {
@@ -38,15 +38,15 @@ miro.menu = (function()
         } );
         collectionList.appendChild( item );
 
-        item = miro.create( 'div', { className : 'collection-item', textContent: 'Pencil Crayon' } ),
+        item = miro.create( 'div', { className : 'collection-item', textContent: 'Pencil Crayon' } );
         miro.button.create( item, illustrations.showPage( 1 ) );
         collectionList.appendChild( item );
 
-        item = miro.create( 'div', { className : 'collection-item', textContent: 'Vector' } ),
+        item = miro.create( 'div', { className : 'collection-item', textContent: 'Vector' } );
         miro.button.create( item, illustrations.showPage( 6 ) );
         collectionList.appendChild( item );
 
-        item = miro.create( 'div', { className : 'collection-item', textContent: 'Digital Paint' } ),
+        item = miro.create( 'div', { className : 'collection-item', textContent: 'Digital Paint' } );
         miro.button.create( item, illustrations.showPage( 8 ) );
         collectionList.appendChild( item );
 

@@ -30,12 +30,13 @@ module.exports = function( grunt ){
          
         jslint: {
             client: {
-                src: ['src/**/*.js'],
+                src: ['src/**/*.js','!src/mint/**/*'],
                 directives: { 
                     sloppy: true,
                     browser: true,
                     nomen: true,
                     plusplus: true,
+                    todo: true,
                     white: true,
                     predef: []
                 },

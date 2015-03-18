@@ -1,9 +1,9 @@
 /*jslint bitwise: true, browser: true, continue: false, devel: true, plusplus: true, regexp: true, sloppy: true, white: true */
-/*global td, miro, $, document, window */
+/*global td, miro, flip, $, document, window */
 
 /* Copyright Terrill Dent, 2013 */
 
-var illustrations = illustrations || {};
+var illustrations = window.illustrations || {};
 
 illustrations = (function()
 {
@@ -54,9 +54,10 @@ illustrations = (function()
             return function() {
                 var delay = 300;
                 miro.menu.hide();
-                if( currentIndex == index ) {
+                if( currentIndex === index ) {
                     return;
-                } else if( currentIndex > index ) {
+                } 
+                if( currentIndex > index ) {
                     flip.close();
                     delay = 700;
                 }
@@ -69,7 +70,6 @@ illustrations = (function()
         init : function()
         {
             var bookPagesParent = $('book-pages'),
-                showPage,
                 pageIndex = 0;
 
             miro.remove( bookPagesParent );

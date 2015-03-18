@@ -12,7 +12,7 @@ window.onload = function()
 			curSrc = target.src;
 			viewer.style.backgroundImage = 'url(' + curSrc + ')';
 		}
-	}
+	};
 
 	thumbnails.addEventListener('mousemove', changeBackground, false );
 	thumbnails.addEventListener('touchmove', changeBackground, false );

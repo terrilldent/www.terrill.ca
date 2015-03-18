@@ -1,7 +1,7 @@
 /*jslint bitwise: true, browser: true, continue: false, devel: true, plusplus: true, regexp: true, sloppy: true, white: true */
-/*global miro, $, document, window */
+/*global $, document, window */
 
-var miro = miro || {};
+var miro = window.miro || {};
 
 
 miro.draggable = (function() 
@@ -74,8 +74,8 @@ miro.draggable = (function()
                 return;
             }
             
-            if( e.touches && e.touches.length > 1 ||
-                (e.which && e.which == 3) || (e.button && e.button == 2) ) {
+            if( ( e.touches && (e.touches.length > 1)) ||
+                (e.which && e.which === 3) || (e.button && e.button === 2) ) {
                 // Ignore right click and second finger press
                 return;
             }
