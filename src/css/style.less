@@ -1,0 +1,482 @@
+
+/* ----------- Reset Styles --------- */
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,form,label,input,textarea,fieldset,p,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+a,a:active,a:focus,input,textarea{outline:none; text-decoration: none}
+td,th{vertical-align:top;text-align:left}
+img,iframe,fieldset{ border:none}
+ol,ul{list-style:none}
+li{list-style-type:none}
+h1,h2,h3,h4{font-size:100%;font-weight:normal}  
+
+/* ----- FONTS ------ */
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('/fonts/Lato/Lato-Light.ttf');
+    }
+@font-face {
+    font-family: 'PtSerif-Bold';
+    src: url('/fonts/PT_Serif/PT_Serif-Web-BoldItalic.ttf');
+    }
+@font-face {
+    font-family: 'PtSerif';
+    src: url('/fonts/PT_Serif/PT_Serif-Web-Regular.ttf');
+    }
+
+
+/* ----- WIREFRAME ------ */
+
+* {
+    -moz-box-sizing:border-box;
+         box-sizing:border-box;
+}
+body {
+    font-family: 'Lato-Light', Helvetica-Neue, Helvetica, Arial, Sans-serif;
+    font-size: 1.1em;
+    }
+.main{
+    padding-top: 2em;
+    position: relative;
+    }
+.wrapper {
+    max-width: 550px;
+    padding: 0 1em;    
+    margin: 0 auto;
+    background-color: #FFF;
+    }
+.wide .wrapper {
+    max-width: 700px;
+    }
+.half-column {
+    width: 50%;
+    vertical-align: top;
+    display: inline-block;
+    float: left;
+    }
+
+.blog .main,
+.blog .main .wrapper{
+    padding: 0;
+}
+
+
+/* ----- HEADER ------ */
+
+.header {
+    padding: 10px 0 10px;
+    border-bottom: 1px solid #EEE;
+    background-color: #FFF;
+}
+.logo {
+    font-size: 1.3em;
+    padding: 7px 0;
+    color: #000;
+    display: inline-block;
+    float: left;
+   
+    &:hover{
+       color: #116;
+        text-decoration: none;
+    }   
+}
+
+/* ----- NAVIGATION ------ */  
+
+nav{
+    text-align: right;
+}
+.nav-link {
+    padding: 13px .4em 5px;
+    margin: 0 .4em;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+
+    &.current {
+        color: #000;
+
+        &:after{
+            content:'';
+            display: inline-block;
+            position: absolute;
+            bottom: -2px;
+            right: 47%;
+            background: #000;
+            width: 4px;
+            height: 4px;
+            border-radius: 2px;
+        }
+    }
+}   
+
+/* ----- TYPOGRAPHY ------ */
+
+
+h1 {
+    font-family: 'PtSerif', Georgia, Serif;
+    font-size: 1.6em;
+    padding: .6em 0;
+    margin: 0;
+    font-size: 2.5em;
+}  
+h2 {
+    font-family: 'PtSerif-Bold', Georgia, Serif;
+    font-size: 1.5em;
+    margin: 2em 0 .6em;
+    clear: both; 
+}
+h3 {
+    font-size: 1.5em;
+    margin: 1em 0 .5em 0;
+}
+h4 {
+    font-size: 1.2em;
+    margin: 1em 0 .5em 0;
+}
+h1 a,
+h2 a,
+h3 a{
+    color: #000;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover{
+    color: #116;
+    text-decoration: none;
+} 
+
+a{
+    color: #228;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+p{
+    margin-bottom: 1em;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    
+    a{
+        color: #000;
+        text-decoration: none;
+        box-shadow: inset 0 -3px 0 #CCE;
+    
+        &:hover{
+            text-decoration: none;
+            box-shadow: inset 0 -7px 0 #CCE;
+        }
+    }
+}
+
+
+/* --------- BLOG POSTS --------------*/
+
+
+.post {
+    margin: 2em 0 2em 0;
+
+    &.hasimage{
+        margin-top: 0;     
+    }
+    &.hasimage .post-body{
+        box-shadow: 0px -1px 3px -2px rgba( 0, 0, 0, .7 );
+    }
+}
+
+.post-body {
+    background: #FFF;
+    position: relative;
+    padding: 15px;
+    margin: 0 1em;
+
+    &:after{
+        content: '\2014';
+    }
+    &.full{
+        margin: 200px 0 0 0;
+        padding: 0;
+    }
+}
+
+.post-page{
+    .post-body{
+        min-height: 300px;
+    }
+}
+
+.post h2 {
+    margin: 0;
+    }
+.post-meta {
+    margin: 0 0 1.5em 0;
+    font-size: .8em;
+    color: #333;
+    display: block;
+    }
+
+.post li {
+    list-style-type: circle;
+    margin: .4em 0 .5em 1.5em;
+    }
+.post ul {
+    margin-bottom: 1em;
+    }
+
+
+
+/* --------- POST PICTURES --------------*/
+
+.illustration-hero{
+    margin: 0 0 -2em 0;
+    width: 100%;
+    background: #EEE;
+}
+.illustration-full{
+    margin: 0;
+    width: 100%;
+}
+.boxed{
+    box-shadow: 0 1px 2px rgba( 0,0,0,.2 );
+}
+
+
+
+/* ------------ FOOTER ----------- */
+
+footer{
+    border-top: 1px solid #EEE;
+    margin-top: 3em;
+    padding: 2em 0;
+    overflow: hidden;
+
+    .profile-photo{
+        display: inline-block;
+        width: 120px;
+        float: left;
+        border-radius: 60px;
+        margin: 0 1em 1em 0;
+    }
+    .footer-title{
+        margin: 5px 0;
+        clear: none;
+    }
+    p{
+        line-height: 1.2em;
+        font-size: .85em;
+    }
+}
+
+
+.icon{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 .3em;
+    background: #000;
+    display: inline-block;
+    background: url( /img/icon_sprite.png ) no-repeat 0 0;
+    background-size: 64px 16px;
+    vertical-align: middle;
+
+    &.twitter{
+        background-position: -16px 0;
+    }
+    &.rss{
+        background-position: -32px 0;
+    }
+    &.email{
+        background-position: -48px 0;
+    }
+}
+
+
+/* --------- PAGINATION --------------*/
+
+.pagination{ 
+    text-align: center;
+}
+
+/* --------- CODE EXAMPLES --------------*/
+.code_title{
+    display:block;
+    font-family: arial, sans-sarif;
+    font-size: .9em;
+    margin: 20px 0 0 0;
+    color:#FFFFFF;
+    padding:3px .5em;
+    background:#667285;
+    border:1px solid #667285;
+    }
+pre {
+    background:#eee;
+    border:1px solid #667285;
+    padding:0 1em 1em 1em;
+    margin: 0 0 20px 0;
+    overflow:auto;
+    }
+    pre code{
+        font-size:.8em;
+        font-family: Courier, "Lucida Console", monospace;
+        line-height:1.5em;
+        }
+    pre code var{
+        font-style:normal;
+        font-weight:bold;
+        }
+
+/* ----- BUTTONS ------ */
+
+.btn{
+    border-bottom: 1px solid #DDD;
+    display: inline-block;
+    background: #EEE;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #000;
+
+    &:hover{
+        text-decoration: none;
+        background: #DDD;
+        border-bottom: 1px solid #CCC;
+    }
+
+    &.disabled{
+        cursor: default;
+        color: #888;
+    }
+}
+
+
+.button{
+    background: #467;
+    color: #FFF;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 10px;
+    border-bottom: 1px solid #134;
+    }
+.button:hover{
+    text-decoration: none;
+    background: #3F5F6F;
+    }
+.button:active{
+    text-decoration: none;
+    background: #222;
+    }
+.button.large{
+    width: 170px;
+    }
+.button-group{
+    text-align: center;
+    }
+
+/* ----- PROJECT LIST ------ */
+
+.projects-list dt,
+.projects-list dd{
+    padding: 1em 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+.projects-list dd{
+    width: 69%;
+    padding-left: 2em;
+}
+
+
+/* ----- ERROR PAGES ------ */
+
+.error-page {
+    text-align: center;
+    margin-top: 3em;
+}
+
+/* ----- MEDIA ------ */
+
+@media all and (max-width: 550px) {
+    .header{
+        border-bottom: 1px solid #EEE;
+        padding-bottom: 1em;
+        padding: 10px;
+    }
+    .logo {
+        font-size: 1.3em;
+        text-align: center;
+        display: block;
+        float: none;
+        padding: 10px 0;
+    }
+    nav{
+        clear: both;
+        text-align: center;
+    }
+    .nav-link {
+        padding: .2em .10em;
+        margin: 0 .3em;
+        white-space: nowrap;
+    }
+
+    h2 {
+        margin-top: 1em;
+    }
+
+    /* -- One Column Projects -- */
+    .projects-list dt,
+    .projects-list dd{
+        padding: 1em 0;
+        display: block;
+        width: auto;
+        }
+    .projects-list dt{
+        padding-bottom: 0;
+        font-weight: bold;
+        color: #000;
+        }
+    .projects-list dd{
+        padding-top: .5em;
+        color: #444;
+        }
+
+    .half-column {
+        width: auto;
+        padding: 0;
+        clear: both;
+        display: block;
+    }
+
+
+    footer{
+        text-align: center;
+        .profile-photo{
+            float: none;
+            margin: 0 0 1em 0;
+        }
+        .footer-title{
+            clear: both;
+        }
+        p{
+            line-height: 1.5em;
+        }
+    }
+}
+
+@media all and (max-width: 660px) {
+    .content {
+        max-width: auto;
+        padding: 0 1em;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) { 
+    .icon{
+        background-image: url(/img/icon_sprite@2x.png);
+    }
+}

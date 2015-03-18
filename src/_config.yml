@@ -1,0 +1,17 @@
+# Site settings
+title: Terrill Dent
+email: your-email@domain.com
+name: Terrill Dent
+description: > #
+  The personal website of Terrill Dent, a software developer with an entrepreneurial spirit in Waterloo Ontario.
+baseurl: ""
+destination: "../build/"
+url: "http://www.terrill.ca"
+twitter_username: terrilldent
+github_username:  terrilldent
+rss: true
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Build settings
+markdown: kramdown

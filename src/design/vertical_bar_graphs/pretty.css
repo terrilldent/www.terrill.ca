@@ -11,6 +11,7 @@
     list-style: circle;
     padding: 0 0 .3em 1em;
     }   
+
 	
 /* --------- CODE EXAMPLES --------------*/
 
@@ -36,7 +37,7 @@
 	border-bottom: none; 
 	color: #FFF;
 	}
-.bar .TGraph li p{
+.TGraph li p{
 	font: 11px Helvetica, Geneva, sans-serif;
 	}
 .bar .TGraph li:hover {font-weight:bold;}

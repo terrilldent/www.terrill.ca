@@ -1,0 +1,104 @@
+---
+layout: page
+title: TFSA Contribution Limit Calculator
+---
+
+
+<style type="text/css">
+    .question{
+        font-size: 1.5em;
+    }
+    #total{
+        font-size: 2em;
+    }
+    select {
+        font-size: 1em;   
+        padding: 5px 10px;
+        margin: 0 .5em;
+        box-shadow: 0 1px 2px #444;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+    }
+    .small-footer{
+        color: #666;
+        margin-top: 4em;
+        font-size: .8em;
+    }
+</style>
+
+
+    <p>Calculate the total contribution limit for your Canadian <a href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/cntrbtn-eng.html">Tax Free Savings Account</a>.</p>
+    <p class="question">What year were you born? <select id="year">
+    </select></p>
+    <div id="results">
+        <p>You turned 18 in <span id="eighteen"></span>.</p>
+        <p>Your total (accumulative) contribution limit is: <span id="total"></span>.</p>
+    </div>  
+
+
+<script type="text/javascript">
+var tfsa = (function(){
+    var doc,
+        eighteen,
+        total,
+        money,
+        year;
+
+    money = function( value ){
+        if( isNaN(value) ){
+            return value;
+        }
+        return '$' + value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    };
+
+    calculate = function(e){
+        var turned18 = parseInt(year.value,10) + 18;
+        eighteen.textContent = turned18;
+
+        var start = Math.max( turned18, 2009 );
+        var lessthan2012 = 2012 - start + 1;
+        var room = 0;
+        if( lessthan2012 > 0 ){
+            room = 5000 * lessthan2012;
+        }
+
+        var now = (new Date()).getFullYear();
+        var after2012 = now - Math.max( start, 2013 ) + 1;
+        if( after2012 > 0 ){
+            room += 5500 * after2012
+        }
+
+        console.log( lessthan2012 );
+        console.log( after2012 );
+        console.log( room );
+        total.textContent = money(room);
+    };
+
+    return {
+        init: function(){
+            doc = document;
+            year = doc.getElementById('year'),
+            total = doc.getElementById('total'),
+            eighteen = doc.getElementById('eighteen');
+
+            var options = doc.createDocumentFragment(),
+                option,
+                i;
+
+            for( i = 1900; i < 2015; i++ ){
+                option = doc.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                option.selected = i === 1986;
+                options.appendChild( option );
+            }
+            year.appendChild(options);
+            year.addEventListener('change', calculate);
+
+            calculate();
+        }
+    }
+}());
+window.addEventListener( 'DOMContentLoaded', tfsa.init, true );
+</script>

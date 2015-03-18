@@ -1,0 +1,26 @@
+{
+  "name": "terrill.ca",
+  "version": "1.0.0",
+  "author": "Terrill Dent",
+  "main": "",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.3.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-env": "^0.4.2",
+    "grunt-jekyll": "^0.4.2",
+    "grunt-jslint": "^1.1.12",
+    "grunt-nodemon": "^0.3.0",
+    "grunt-nodestatic": "^0.1.2",
+    "grunt-open": "^0.2.3",
+    "grunt-shell": "^1.1.2",
+    "jest-cli": "~0.1.17",
+    "uglify-js": "~2.4.15",
+    "watchify": "^2.1.1"
+  }
+}

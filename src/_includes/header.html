@@ -1,0 +1,20 @@
+{% if page.nav == 'blog' %}
+    {% assign navblog = 'current' %}
+{% elsif page.nav == 'about' %}
+    {% assign navabout = 'current' %}
+{% elsif page.nav == 'illustrations' %}
+    {% assign navillus = 'current' %}
+{% else %}
+    {% assign navproj = 'current' %}
+{% endif %}
+<header class="header">
+  <div class="wrapper">
+    <a class="logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <nav>
+      <a class="nav-link {{navblog}}" href="/">Blog</a>
+      <a class="nav-link {{navabout}}" href="/about/">About</a>
+      <a class="nav-link {{navproj}}" href="/projects/">Projects</a>
+      <a class="nav-link {{navillus}} last" href="/illustrations/">Illustrations</a>
+    </nav>
+  </div>
+</header>

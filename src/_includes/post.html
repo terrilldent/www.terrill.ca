@@ -1,0 +1,20 @@
+{% if post.image %}
+    {% assign imageclass = 'hasimage' %}
+{% else %}
+    {% assign imageclass = '' %}
+{% endif %}
+
+    <div class="post {{imageclass}}">
+
+      {% if post.image %}
+      <img src="{{post.image}}" class="illustration-hero">
+      {% endif %}
+
+      <div class="post-body">
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <span class="post-meta">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </span>
+        {{ post.content }}
+      </div>
+    </div>
