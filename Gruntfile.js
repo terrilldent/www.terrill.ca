@@ -123,9 +123,7 @@ module.exports = function( grunt ){
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-shell');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-express');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-shell');

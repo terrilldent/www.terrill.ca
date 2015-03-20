@@ -43,7 +43,6 @@ illustrations = (function()
             div.appendChild( pageNumber );
         }
         miro.button.create( menuButton, miro.menu.show );
-        miro.button.create( masthead, flip.close );
 
         return flip.page.create( div, { onShowComplete : handleShowComplete( index ) } );
     };

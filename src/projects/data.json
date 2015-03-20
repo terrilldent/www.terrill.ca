@@ -1,0 +1,267 @@
+
+[
+{ 
+    title: 'Mobile Apps',
+    projects: [
+        { 
+            name: 'Heffner Toyota',
+            link: 'https://blackseal.trustpoint.ca/',
+            description: 'The Heffner Toyota Application was built from scratch using web technologies - have you seen a better performing HTML based mobile app?.',
+            tags: [
+                'HTML5',
+                'JS',
+                'CSS',
+                'Cordova',
+                'iOS',
+                'Android',
+                'BlackBerry'                
+            ]
+        },
+        { 
+            name: 'BlackSeal NFC',
+            link: 'https://play.google.com/store/apps/details?id=com.trustpoint.blackseal',
+            description: 'This is an Android application that is used to read and write cryptographically significant NFC tags.',
+            tags: [
+                'Android',
+                'NFC',
+                'Design',
+                'Icons',
+                'Crypto'
+            ]
+        },
+        { 
+            name: 'BlackBerry Bridge',
+            link: 'http://appworld.blackberry.com/webstore/content/19435/',
+            description: 'Front End Web + UX development. Battle-ready JavaScript. Six brand new apps from Scratch. Inventing new forms of device-to-device interaction.',
+            tags: [
+                'HTML',
+                'CSS',
+                'JS',
+                'UX',
+                'Design',
+                'Java',
+                'Patents'
+            ]
+        },
+        {
+            name: 'Facebook for BlackBerry',
+            link: 'https://appworld.blackberry.com/webstore/content/680/?countrycode=CA&lang=en',
+            description: 'I helped create the first version of Facebook for BlackBerry, before there was an App Store.',
+            tags: [
+                'Java',
+                'BlackBerry',
+                'UX',
+                'Patents'
+            ]
+        },
+        {
+            name: 'BlackBerry BBM Groups',
+            link: 'http://ca.blackberry.com/bbm.html',
+            description: 'I helped pioneer one-to-many communication between groups of people on mobile devices, now part of BBM.',
+            tags: [
+                'Java',
+                'Icons',
+                'BlackBerry',
+                'Patents'
+            ]
+        }
+    ]
+},
+{ 
+    title: "Web Projects",
+    projects: [
+        {
+            name: 'Ten Thousand Coffees',
+            link: 'tenthousandcoffees.com',
+            description: 'Helped launch Ten Thousand Coffees, a social network connecting the leaders of today with the leaders of tomorrow.',
+            tags: [
+                'Node',
+                'Backbone',
+                'MongoDB',
+                'JS',
+                'CSS'
+            ]
+        },
+        {
+            name: 'write',
+            link: 'https://github.com/terrilldent/write',
+            description: 'A blogging engine for non-https websites. Provides authenticity and integrity protection - but not confidentiality.',
+            tags: [
+                'PHP',
+                'MySQL',
+                'JS',
+                'CSS',
+                'Crypto'
+            ]
+        },    
+        {
+            name: 'flip.js',
+            link: 'https://github.com/terrilldent/flip.js',
+            description: 'A JavaScript library to simulate page flipping. Mobile-first, performance focused design.',
+            tags: [
+                'JS',
+                'CSS'
+            ]
+        },
+        {
+            name: 'HTML Table Sorter',
+            link: '/sorting/'
+            description: 'Using javascript to sort HTML tables on the client side',
+            tags: [
+                'JS'
+            ]
+        }
+    ]
+},
+{ 
+    title: "Server Projects",
+    projects: [
+        {
+            name: 'BlackSeal Authenticity Service',
+            link: 'https://blackseal.trustpoint.ca/',
+            description: 'An authenticity service combining NFC and Digital Signatures adding provable authenticity to luxury goods.',
+            tags: [
+                'JS',
+                'CSS',
+                'Node',
+                'MongoDB',
+                'Docker'
+            ]
+        },
+        {
+            name: 'Certificate Authority',
+            link: 'http://www.trustpointinnovation.com/m2m-certificate-authority/',
+            description: 'Built a Certificate Authority in the cloud, for a new generation of secure products that require Signatures and Certificates.',
+            tags: [
+                'Java',
+                'Docker',
+                'Crypto',
+                'PostgreSQL',
+                'Tomcat'
+            ]
+        }
+    ]
+},
+{ 
+    title: 'Design &amp; UX',    
+    projects: [
+        {
+            name: 'Illustrations Book',
+            link: '/illustrations/',
+            description: 'Using my page flipping library to create a digital book of my artwork. ',
+            tags: [
+                'JS',
+                'CSS'
+            ]
+        },
+        {
+            name: 'BlackBerry Advanced Java UI',
+            link: 'https://github.com/blackberry/Samples-for-Java/tree/master/Advanced%20UI',
+            description: 'BlackBerry was missing some controls and components. I helped bring them to the community and evangelize at conferences. <a href="http://supportforums.blackberry.com/t5/Java-Development/Implement-advanced-buttons-fields-and-managers/ta-p/488276">Screenshots</a>',
+            tags: [
+                'Java',
+                'Image Resources',
+                'BlackBerry'
+            ]
+        },
+        {
+            name: 'BlackBerry Clock',
+            description: 'Close collaboration between developers and designers lead to a beautiful product in a short timespan. This project was a lot of fun, with some of the first animated UI on BlackBerry.',
+            tags: [
+                'Java',
+                'Animation',
+                'Design',
+                'BlackBerry'
+            ]
+        }
+    ]
+},
+{ 
+    id: 'books',
+    title: 'Books & I.P.',    
+    projects: [
+        {
+            name: 'Intellectual Property',
+            link: 'http://www.google.com/?tbm=pts#hl=en&tbm=pts&sclient=psy-ab&q=Terrill+Dent&oq=Terrill+Dent&fp=8ef39aeab66ed2cf',
+            description: 'You can see some of my many patents and applications via this <a href="http://www.google.com/?tbm=pts#hl=en&tbm=pts&sclient=psy-ab&q=Terrill+Dent&oq=Terrill+Dent&fp=8ef39aeab66ed2cf">Google Patent Search</a>. Like it or not, patents are now a force in the software industry. Effectively contributing to an IP portfolio requires sustained innovation.',
+            tags: [
+                'Patents',
+                'IP'
+            ]
+        },
+        {
+            name: 'Technical Editor - Google Maps Applications Book',
+            link: 'http://www.amazon.com/gp/product/1590597079/002-3092982-4844825?v=glance&n=283155',
+            description: 'I was the Technical Reviewer for <a href="http://www.amazon.com/gp/product/1590597079/002-3092982-4844825?v=glance&n=283155">Beginning Google Maps Applications with PHP and AJAX (2006)</a>',
+            tags: [
+                'PHP',
+                'MySQL',
+                'JS'
+            ]
+        }
+    ]
+},
+{ 
+    id: 'design',
+    title: 'Early Code and Design',    
+    description: 'Projects that I did in 2005-2009 while developing my programming skills and learning about design in general.',
+    projects: [
+        {
+            name: 'HTML Vertical Bar Graphs',
+            link: '/design/vertical_bar_graphs/',
+            description: 'Using HTML and CSS to create vertical bar graphs. Example PHP to generate from data sources'
+        },
+        {
+            name: 'Repeatable Backgrounds',
+            link: '/design/backgrounds/',
+            description: 'Some repeatable background tiles and textures'
+        },
+        {
+            name: 'MSN Messenger Skins',
+            link: 'http://terrill.deviantart.com/gallery/',
+            description: 'Complete themes for Microsoft\'s MSN Messenger program. Some used by hundreds of thousands of people.'
+        },
+        {
+            name: 'HTML Resume Templates',
+            link: '/design/html_resume',
+            description: 'Sample HTML Resume templates and ideas.'
+        }       
+    ]
+},
+{ 
+    id: 'earlyweb',
+    title: 'Early Websites',    
+    description: 'A collection of websites I created between 2005 and 2010.',
+    projects: [
+        {
+            name: 'Skyway Printing',
+            link: 'http://www.skywayprinting.com',
+            description: 'Skyway Printing complete website'
+        },
+        {
+            name: 'Subletr',
+            description: '2nd Generation Off Campus Housing Map (Using Google Maps)'
+        },
+        {
+            name: 'MapLet',
+            description: '1st Generation Student Housing website'
+        },
+        {
+            name: 'GRT Bus Route Map',
+            description: 'Interactive Transit Map for Kitchener Waterloo.'
+        },
+        {
+            name: 'Xtron Imaging Website',
+            description: 'A complete website for Xtron Imaging'
+        },
+        {
+            name: 'Coldwell Banker, Hanover Ontario',
+            description: 'Built and maintained a Real Estate website'
+        },
+        {
+            name: 'Cruise Miss Toronto',
+            description: 'Website and Toronto Harbourfront Panorama using Google Maps'
+        }
+    ]
+}
+]

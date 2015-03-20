@@ -88,7 +88,7 @@ h3 {
         }
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+(min-resolution: 192dppx) { 
     .global-menu {
         background:  url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAyAQMAAAA6OCpBAAAABlBMVEX///////9VfPVsAAAAAXRSTlMAQObYZgAAACJJREFUeF7tziEBAAAQwsDvn5YGvMAQABxTJ3dUyKPWnh0PpaftT1/fggoAAAAASUVORK5CYII= ) no-repeat center center;
         background-size: 30px 25px;

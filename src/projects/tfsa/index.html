@@ -1,15 +1,22 @@
 ---
-layout: page
+layout: default
 title: TFSA Contribution Limit Calculator
 ---
 
 
 <style type="text/css">
     .question{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
-    #total{
+    .result{
         font-size: 2em;
+        float: right;
+    }
+    .label{
+        vertical-align: top;
+        line-height: 2em;
+        height: 2em;
+        display: inline-block;
     }
     select {
         font-size: 1em;   
@@ -25,16 +32,40 @@ title: TFSA Contribution Limit Calculator
         margin-top: 4em;
         font-size: .8em;
     }
+
+    @media all and (max-width: 550px) {
+        h1{
+            font-size: 2em;
+        }
+        select{
+            width: 100%;
+            margin: .5em 0;
+            text-align: center;
+            clear: both;
+            display: block;
+        }
+    }
+
 </style>
 
-
-    <p>Calculate the total contribution limit for your Canadian <a href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/cntrbtn-eng.html">Tax Free Savings Account</a>.</p>
-    <p class="question">What year were you born? <select id="year">
+<div class="wrapper">
+    <h1>TFSA <span class="no-mobile">Contribution Limit</span> Calculator</h1>
+    <p>Calculate your total contribution limit, and this year's limit for your Canada Tax Free Savings Account (TFSA).</p>
+    <p class="question">What year were you born?<select id="year">
     </select></p>
     <div id="results">
-        <p>You turned 18 in <span id="eighteen"></span>.</p>
-        <p>Your total (accumulative) contribution limit is: <span id="total"></span>.</p>
+        <p><span class="label">You turned 18 in:</span> <span id="eighteen" class="result"></span></p>
+        <p><span class="label">Your total limit is:</span> <span id="total" class="result"></span></p>
+        <p><span class="label">Your limit this year:</span> <span id="thisyear" class="result">$5500</span></p>
     </div>  
+
+    <h2>More Resources</h2>
+    <p>From 2009-2012 inclusive, the contribution limit was $5,000.</p>
+    <p>From 2013+ inclusive, the contribution limit is $5,500.</p>
+    <p>Unused contributions accumulate and never expire. Withdrawals count against your contribution room the following year.</p>
+    <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/cntrbtn-eng.html">CRA TFSA Information</a></p>
+    <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/xmpl-eng.html">Contribution Room Examples</a></p>
+</div>
 
 
 <script type="text/javascript">
@@ -49,7 +80,7 @@ var tfsa = (function(){
         if( isNaN(value) ){
             return value;
         }
-        return '$' + value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        return '$' + value.toFixed(0).replace(/\d(?=(\d{3})+\.)/g, '$&,');
     };
 
     calculate = function(e){
@@ -69,9 +100,6 @@ var tfsa = (function(){
             room += 5500 * after2012
         }
 
-        console.log( lessthan2012 );
-        console.log( after2012 );
-        console.log( room );
         total.textContent = money(room);
     };
 

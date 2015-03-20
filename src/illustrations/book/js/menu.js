@@ -43,11 +43,11 @@ miro.menu = (function()
         collectionList.appendChild( item );
 
         item = miro.create( 'div', { className : 'collection-item', textContent: 'Vector' } );
-        miro.button.create( item, illustrations.showPage( 6 ) );
+        miro.button.create( item, illustrations.showPage( 8 ) );
         collectionList.appendChild( item );
 
         item = miro.create( 'div', { className : 'collection-item', textContent: 'Digital Paint' } );
-        miro.button.create( item, illustrations.showPage( 8 ) );
+        miro.button.create( item, illustrations.showPage( 10 ) );
         collectionList.appendChild( item );
 
 
