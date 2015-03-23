@@ -1,0 +1,40 @@
+
+
+body,
+html,
+.photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+body,
+html{
+    overflow: hidden;
+}
+
+#background{
+    background: url( img/background-900-blur.jpg ) no-repeat bottom center;
+    background-size: cover;
+    }
+#middle{
+    background: url( img/middle-900-blur.png ) no-repeat bottom center;
+    background-size: 100% auto;
+
+    left: -10px;
+    right: -10px;
+    }
+#foreground{
+    background: url( img/foreground-900.png ) no-repeat bottom center;
+    background-size: 100% auto;
+
+    top: 0;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    }

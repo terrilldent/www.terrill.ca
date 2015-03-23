@@ -1,351 +1,380 @@
 ---
-layout: page
+layout: default
 title: Projects
-bodyClass: "no-main-gap"
 ---
 
-<div id="tag-list"></div>
-<div id="rendering"></div>
+<div id="sub-nav">
+    <span class="tag" id="all">All</span>
+    <span id="cat-list"></span>
+    <span id="tag-overflow">
+        <span id="more" class="tag">More<span>&#x25BE;</span></span>
+        <div id="tag-list"></div>
+    </span>
+</div>
+
+<div class="wrapper">
+    <div id="rendering"></div>
+</div>
 
 <script type="text/javascript">
 var data = 
 [
-{ 
-    id: 'mobile',
-    title: 'Mobile Apps',
-    projects: [
-        { 
-            name: 'BlackSeal NFC',
-            link: 'https://play.google.com/store/apps/details?id=com.trustpoint.blackseal',
-            description: 'An Android application that is used to write and verify cryptographically significant NFC tags.',
-            tags: [
-                'Android',
-                'NFC',
-                'Design',
-                'Graphics',
-                'Analytics',
-                'Crypto'
-            ]
-        },
-        { 
-            name: 'Heffner Toyota',
-            link: 'https://itunes.apple.com/ca/app/heffner-toyota-kitchener-waterloo/id629628628?mt=8',
-            description: 'The Heffner Toyota Application was built from scratch using web technologies - no libraries were used, focus on performance.',
-            tags: [
-                'HTML',
-                'JS',
-                'CSS',
-                'Cordova',
-                'iOS',
-                'Android',
-                'BlackBerry',
-                'UX'
-            ]
-        },
-        { 
-            name: 'BlackBerry Bridge',
-            link: 'http://appworld.blackberry.com/webstore/content/19435/',
-            description: 'Front End Web + UX development. Battle-ready JavaScript. Six brand new apps from Scratch. Inventing new forms of device-to-device interaction.',
-            tags: [
-                'HTML',
-                'CSS',
-                'JS',
-                'UX',
-                'Design',
-                'Java',
-                'Patents'
-            ]
-        },
-        {
-            name: 'Facebook for BlackBerry',
-            link: 'https://appworld.blackberry.com/webstore/content/680/?countrycode=CA&lang=en',
-            description: 'I helped create the first version of Facebook for BlackBerry, before there was an App Store.',
-            tags: [
-                'Java',
-                'BlackBerry',
-                'UX',
-                'Patents'
-            ]
-        },
-        {
-            name: 'BlackBerry BBM Groups',
-            link: 'http://ca.blackberry.com/bbm.html',
-            description: 'I helped pioneer one-to-many communication between groups of people on mobile devices, now part of BBM.',
-            tags: [
-                'Java',
-                'Graphics',
-                'BlackBerry',
-                'Patents'
-            ]
-        }
-    ]
-},
-{ 
-    id: 'web',
-    title: "Web &amp; Server Projects",
-    projects: [
-        {
-            name: 'BlackSeal Authenticity Service',
-            link: 'https://blackseal.trustpoint.ca/',
-            description: 'An authenticity service combining NFC and Digital Signatures adding provable authenticity to luxury goods.',
-            tags: [
-                'JS',
-                'CSS',
-                'Node',
-                'MongoDB',
-                'Docker',
-                'Design',
-                'UX',
-                'Graphics'
-            ]
-        },
-        {
-            name: 'Certificate Authority',
-            link: 'http://www.trustpointinnovation.com/m2m-certificate-authority/',
-            description: 'Built a Certificate Authority in the cloud, for a new generation of secure products that require Signatures and Certificates.',
-            tags: [
-                'Java',
-                'Docker',
-                'Crypto',
-                'PostgreSQL',
-                'Tomcat'
-            ]
-        },
-        {
-            name: 'Ten Thousand Coffees',
-            link: 'https://www.tenthousandcoffees.com',
-            description: 'Helped launch Ten Thousand Coffees, a social network connecting the leaders of today with the leaders of tomorrow.',
-            tags: [
-                'Node',
-                'Backbone',
-                'MongoDB',
-                'JS',
-                'CSS'
-            ]
-        },
-        {
-            name: 'write',
-            link: 'https://github.com/terrilldent/write',
-            description: 'A blogging engine for non-https websites. Provides authenticity and integrity protection - but not confidentiality.',
-            tags: [
-                'PHP',
-                'MySQL',
-                'JS',
-                'CSS',
-                'Crypto'
-            ]
-        }
-    ]
-},
-{ 
-    id: 'ux',
-    title: 'Design &amp; UX Prototyping',    
-    projects: [
-        {
-            name: 'Illustrations Book',
-            link: '/illustrations/',
-            description: 'Using my page flipping library to create a digital book of my artwork. ',
-            tags: [
-                'JS',
-                'Animation',
-                'CSS'
-            ]
-        },
-        {
-            name: 'BlackBerry Advanced Java UI',
-            link: 'https://github.com/blackberry/Samples-for-Java/tree/master/Advanced%20UI',
-            description: 'BlackBerry was missing some controls and components. I helped bring them to the community and evangelize at conferences. <a href="http://supportforums.blackberry.com/t5/Java-Development/Implement-advanced-buttons-fields-and-managers/ta-p/488276">Screenshots</a>',
-            tags: [
-                'Java',
-                'Graphics',
-                'Animation',
-                'BlackBerry'
-            ]
-        },
-        {
-            name: 'BlackBerry Clock',
-            description: 'Close collaboration between developers and designers lead to a beautiful product in a short timespan. This project was a lot of fun, with some of the first animated UI on BlackBerry.',
-            tags: [
-                'Java',
-                'Animation',
-                'Design',
-                'BlackBerry'
-            ]
-        },
-        {
-            name: 'flip.js',
-            link: 'https://github.com/terrilldent/flip.js',
-            description: 'A JavaScript library to simulate page flipping. Mobile-first, performance focused design.',
-            tags: [
-                'JS',
-                'CSS'
-            ]
-        }
-    ]
-},
-{ 
-    id: 'books',
-    title: 'Books & I.P.',    
-    projects: [
-        {
-            name: 'Intellectual Property',
-            link: 'http://www.google.com/?tbm=pts#hl=en&tbm=pts&sclient=psy-ab&q=Terrill+Dent&oq=Terrill+Dent&fp=8ef39aeab66ed2cf',
-            description: 'You can see some of my many patents and applications via this <a href="http://www.google.com/?tbm=pts#hl=en&tbm=pts&sclient=psy-ab&q=Terrill+Dent&oq=Terrill+Dent&fp=8ef39aeab66ed2cf">Google Patent Search</a>. Like it or not, patents are now a force in the software industry. Effectively contributing to an IP portfolio requires sustained innovation.',
-            tags: [
-                'Patents'
-            ]
-        },
-        {
-            name: 'Technical Editor - Google Maps Applications Book',
-            link: 'http://www.amazon.com/gp/product/1590597079/002-3092982-4844825?v=glance&n=283155',
-            description: 'I was the Technical Reviewer for <a href="http://www.amazon.com/gp/product/1590597079/002-3092982-4844825?v=glance&n=283155">Beginning Google Maps Applications with PHP and AJAX (2006)</a>',
-            tags: [
-                'PHP',
-                'MySQL',
-                'Maps',
-                'JS'
-            ]
-        }
-    ]
-},
-{ 
-    id: 'design',
-    title: 'Early Code and Design',    
-    description: 'Projects that I did in 2005-2009 while developing my programming skills and learning about design in general.',
-    projects: [
-        {
-            name: 'HTML Vertical Bar Graphs',
-            link: '/design/vertical_bar_graphs/',
-            description: 'Using HTML and CSS to create vertical bar graphs. Example PHP to generate from data sources',
-            tags: [
-                'PHP',
-                'CSS'
-            ]
-        },
-        {
-            name: 'HTML Table Sorter',
-            link: '/sorting/',
-            description: 'Using javascript to sort HTML tables on the client side',
-            tags: [
-                'JS'
-            ]
-        },
-        {
-            name: 'Repeatable Backgrounds',
-            link: '/design/backgrounds/',
-            description: 'Some repeatable background tiles and textures',
-            tags: [
-                'Graphics'
-            ]
-        },
-        {
-            name: 'MSN Messenger Skins',
-            link: 'http://terrill.deviantart.com/gallery/',
-            description: 'Complete themes for Microsoft\'s MSN Messenger program. Some used by hundreds of thousands of people.',
-            tags: [
-                'Design',
-                'Graphics',
-                'UX'
-            ]
-        },
-        {
-            name: 'HTML Resume Templates',
-            link: '/design/html_resume',
-            description: 'Sample HTML Resume templates and ideas.',
-            tags: [
-                'HTML',
-                'Design',
-                'CSS'
-            ]
-        }       
-    ]
-},
-{ 
-    id: 'earlyweb',
-    title: 'Early Websites',    
-    description: 'A collection of websites I created between 2005 and 2010.',
-    projects: [
-        {
-            name: 'Skyway Printing',
-            link: 'http://www.skywayprinting.com',
-            description: 'Skyway Printing complete website',
-            tags: [
-                'HTML',
-                'Design',
-                'CSS'
-            ]
-        },
-        {
-            name: 'Subletr',
-            description: '2nd Generation Off Campus Housing Map (Using Google Maps)',
-            tags: [
-                'PHP',
-                'MySQL',
-                'JS',
-                'Maps',
-                'CSS'
-            ]
-        },
-        {
-            name: 'GRT Bus Route Map',
-            description: 'Interactive Transit Map for Kitchener Waterloo.',
-            tags: [
-                'MySQL',
-                'JS',
-                'Maps',
-                'CSS'
-            ]
-        },
-        {
-            name: 'Xtron Imaging Website',
-            description: 'A complete website for Xtron Imaging',
-            tags: [
-                'HTML',
-                'CSS'
-            ]
-        },
-        {
-            name: 'Coldwell Banker, Hanover Ontario',
-            description: 'Built and maintained a Real Estate website',
-            tags: [
-                'MySQL',
-                'PHP',
-                'HTML',
-                'CSS'
-            ]
-        },
-        {
-            name: 'Cruise Miss Toronto',
-            description: 'Website and Toronto Harbourfront Panorama using Google Maps',
-            tags: [
-                'JS',
-                'Maps',
-                'HTML',
-                'CSS'
-            ]
-        }
-    ]
-}
+    { 
+        id: 'mobile',
+        title: 'Mobile Apps',
+        tagTitle: 'Mobile',
+        projects: [
+            { 
+                name: 'BlackSeal NFC',
+                link: 'https://play.google.com/store/apps/details?id=com.trustpoint.blackseal',
+                description: 'An Android application that is used to write and verify cryptographically significant NFC tags.',
+                tags: [
+                    'Android',
+                    'NFC',
+                    'Design',
+                    'Graphics',
+                    'Analytics',
+                    'Crypto'
+                ]
+            },
+            { 
+                name: 'Heffner Toyota',
+                link: 'https://itunes.apple.com/ca/app/heffner-toyota-kitchener-waterloo/id629628628?mt=8',
+                description: 'The Heffner Toyota Application was built from scratch using web technologies - no libraries were used, focus on performance.',
+                tags: [
+                    'HTML',
+                    'JS',
+                    'CSS',
+                    'Cordova',
+                    'iOS',
+                    'Android',
+                    'BlackBerry',
+                    'UX'
+                ]
+            },
+            { 
+                name: 'BlackBerry Bridge',
+                link: 'http://appworld.blackberry.com/webstore/content/19435/',
+                description: 'Front End Web + UX development. Battle-ready JavaScript. Six brand new apps from Scratch. Inventing new forms of device-to-device interaction.',
+                tags: [
+                    'HTML',
+                    'CSS',
+                    'JS',
+                    'UX',
+                    'Design',
+                    'Java',
+                    'Patents'
+                ]
+            },
+            {
+                name: 'Facebook for BlackBerry',
+                link: 'https://appworld.blackberry.com/webstore/content/680/?countrycode=CA&lang=en',
+                description: 'I helped create the first version of Facebook for BlackBerry, before there was an App Store.',
+                tags: [
+                    'Java',
+                    'BlackBerry',
+                    'UX',
+                    'Patents'
+                ]
+            },
+            {
+                name: 'BlackBerry BBM Groups',
+                link: 'http://ca.blackberry.com/bbm.html',
+                description: 'I helped pioneer one-to-many communication between groups of people on mobile devices, now part of BBM.',
+                tags: [
+                    'Java',
+                    'Graphics',
+                    'BlackBerry',
+                    'Patents'
+                ]
+            }
+        ]
+    },
+    { 
+        id: 'web',
+        tagTitle: 'Web/Server',
+        title: "Web &amp; Server Projects",
+        projects: [
+            {
+                name: 'BlackSeal Authenticity Service',
+                link: 'https://blackseal.trustpoint.ca/',
+                description: 'An authenticity service combining NFC and Digital Signatures adding provable authenticity to luxury goods.',
+                tags: [
+                    'JS',
+                    'CSS',
+                    'Node',
+                    'MongoDB',
+                    'Docker',
+                    'Design',
+                    'UX',
+                    'Graphics'
+                ]
+            },
+            {
+                name: 'Certificate Authority',
+                link: 'http://www.trustpointinnovation.com/m2m-certificate-authority/',
+                description: 'Built a Certificate Authority in the cloud, for a new generation of secure products that require Signatures and Certificates.',
+                tags: [
+                    'Java',
+                    'Docker',
+                    'Crypto',
+                    'PostgreSQL',
+                    'Tomcat'
+                ]
+            },
+            {
+                name: 'Ten Thousand Coffees',
+                link: 'https://www.tenthousandcoffees.com',
+                description: 'Helped launch Ten Thousand Coffees, a social network connecting the leaders of today with the leaders of tomorrow.',
+                tags: [
+                    'Node',
+                    'Backbone',
+                    'MongoDB',
+                    'JS',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'write',
+                link: 'https://github.com/terrilldent/write',
+                description: 'A blogging engine for non-https websites. Provides authenticity and integrity protection - but not confidentiality.',
+                tags: [
+                    'PHP',
+                    'MySQL',
+                    'JS',
+                    'CSS',
+                    'Crypto'
+                ]
+            }
+        ]
+    },
+    { 
+        id: 'ux',
+        tagTitle: 'Design/UX',
+        title: 'Design &amp; UX Prototyping',    
+        projects: [
+            {
+                name: 'Illustrations Book',
+                link: '/illustrations/',
+                description: 'Using my page flipping library to create a digital book of my artwork. ',
+                tags: [
+                    'JS',
+                    'Animation',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'BlackBerry Advanced Java UI',
+                link: 'https://github.com/blackberry/Samples-for-Java/tree/master/Advanced%20UI',
+                description: 'BlackBerry was missing some controls and components. I helped bring them to the community and evangelize at conferences. <a href="http://supportforums.blackberry.com/t5/Java-Development/Implement-advanced-buttons-fields-and-managers/ta-p/488276">Screenshots</a>',
+                tags: [
+                    'Java',
+                    'Graphics',
+                    'Animation',
+                    'BlackBerry'
+                ]
+            },
+            {
+                name: 'BlackBerry Clock',
+                description: 'Close collaboration between developers and designers lead to a beautiful product in a short timespan. This project was a lot of fun, with some of the first animated UI on BlackBerry.',
+                tags: [
+                    'Java',
+                    'Animation',
+                    'Design',
+                    'BlackBerry'
+                ]
+            },
+            {
+                name: 'flip.js',
+                link: 'https://github.com/terrilldent/flip.js',
+                description: 'A JavaScript library to simulate page flipping. Mobile-first, performance focused design.',
+                tags: [
+                    'JS',
+                    'CSS'
+                ]
+            }
+        ]
+    },
+    { 
+        id: 'books',
+        tagTitle: 'Books/IP',
+        title: 'Books & I.P.',    
+        projects: [
+            {
+                name: 'Intellectual Property',
+                link: 'http://www.google.com/?tbm=pts#hl=en&tbm=pts&sclient=psy-ab&q=Terrill+Dent&oq=Terrill+Dent&fp=8ef39aeab66ed2cf',
+                description: 'You can see some of my many patents and applications via this <a href="http://www.google.com/?tbm=pts#hl=en&tbm=pts&sclient=psy-ab&q=Terrill+Dent&oq=Terrill+Dent&fp=8ef39aeab66ed2cf">Google Patent Search</a>. Like it or not, patents are now a force in the software industry. Effectively contributing to an IP portfolio requires sustained innovation.',
+                tags: [
+                    'Patents'
+                ]
+            },
+            {
+                name: 'Technical Editor - Google Maps Applications Book',
+                link: 'http://www.amazon.com/gp/product/1590597079/002-3092982-4844825?v=glance&n=283155',
+                description: 'I was the Technical Reviewer for <a href="http://www.amazon.com/gp/product/1590597079/002-3092982-4844825?v=glance&n=283155">Beginning Google Maps Applications with PHP and AJAX (2006)</a>',
+                tags: [
+                    'PHP',
+                    'MySQL',
+                    'Maps',
+                    'JS'
+                ]
+            }
+        ]
+    },
+    { 
+        id: 'design',
+        title: 'Early Code and Design',    
+        description: 'Projects that I did in 2005-2009 while developing my programming skills and learning about design in general.',
+        projects: [
+            {
+                name: 'HTML Vertical Bar Graphs',
+                link: '/design/vertical_bar_graphs/',
+                description: 'Using HTML and CSS to create vertical bar graphs. Example PHP to generate from data sources',
+                tags: [
+                    'PHP',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'HTML Table Sorter',
+                link: '/sorting/',
+                description: 'Using javascript to sort HTML tables on the client side',
+                tags: [
+                    'JS'
+                ]
+            },
+            {
+                name: 'Repeatable Backgrounds',
+                link: '/design/backgrounds/',
+                description: 'Some repeatable background tiles and textures',
+                tags: [
+                    'Graphics'
+                ]
+            },
+            {
+                name: 'MSN Messenger Skins',
+                link: 'http://terrill.deviantart.com/gallery/',
+                description: 'Complete themes for Microsoft\'s MSN Messenger program. Some used by hundreds of thousands of people.',
+                tags: [
+                    'Design',
+                    'Graphics',
+                    'UX'
+                ]
+            },
+            {
+                name: 'HTML Resume Templates',
+                link: '/design/html_resume',
+                description: 'Sample HTML Resume templates and ideas.',
+                tags: [
+                    'HTML',
+                    'Design',
+                    'CSS'
+                ]
+            }       
+        ]
+    },
+    { 
+        id: 'earlyweb',
+        title: 'Early Websites',    
+        description: 'A collection of websites I created between 2005 and 2010.',
+        projects: [
+            {
+                name: 'Skyway Printing',
+                link: 'http://www.skywayprinting.com',
+                description: 'Skyway Printing - a complete website for this one-stop printing company.',
+                tags: [
+                    'HTML',
+                    'Design',
+                    'Graphics',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'Subletr',
+                description: 'My 2nd Generation Off Campus Housing Map (Using Google Maps)',
+                tags: [
+                    'PHP',
+                    'MySQL',
+                    'JS',
+                    'Maps',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'GRT Bus Route Map',
+                description: 'An interactive Transit Map for Kitchener Waterloo.',
+                tags: [
+                    'MySQL',
+                    'JS',
+                    'Maps',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'Xtron Imaging Website',
+                description: 'A complete website for Xtron Imaging, makers of health imaging equiment.',
+                tags: [
+                    'HTML',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'Coldwell Banker, Hanover Ontario',
+                description: 'Built and maintained a Real Estate website for a small town real estate shop.',
+                tags: [
+                    'MySQL',
+                    'PHP',
+                    'HTML',
+                    'CSS'
+                ]
+            },
+            {
+                name: 'Cruise Miss Toronto',
+                description: 'Website and Toronto Harbourfront Panorama using Google Maps',
+                tags: [
+                    'JS',
+                    'Maps',
+                    'HTML',
+                    'CSS'
+                ]
+            }
+        ]
+    }
 ];
 
 (function(){
-
     var tagLookup = {},
-        tagCount = {},
-        rendering = document.getElementById('rendering'),
-        clearCollection,
-        firstRender = true,
+        
+        doc = document,
+        rendering = doc.getElementById('rendering'),
+        
+        $,
+        create,
         printAll,
         printSection,
         printProjects,
         printProject,
         printAllTags,
-        printTagCollection;
+        printTagCollection,
+        parseTags;
 
-    clearCollection = function(){
-        rendering.innerHTML = '';
-        rendering.appendChild( printAll(data) );
+
+    $ = function(id){
+        return document.getElementById(id);
+    },
+
+    create = function( tagName, attributes ){
+        var element = doc.createElement( tagName ),
+            key;
+
+        for( key in attributes ) {
+            if( attributes.hasOwnProperty( key ) ) {
+                element[ key ] = attributes[ key ];
+            }
+        }
+        return element;
     };
+
 
     printTagCollection = function(e){
         if( !e || !e.target ){
@@ -353,125 +382,114 @@ var data =
         }
 
         var word = e.target.getAttribute('data-key'),
-            div = document.createElement('div'),
-            title = document.createElement('h2'),
-            tagProjects = tagLookup[word];
+            tagData = tagLookup[word],
+            tagProjects = tagData.projects,
+            div,
+            title;
 
-        title.innerHTML = 'Projects using ' + word + '<span class="clear">&#x2715;</span>';
-        title.addEventListener('click', clearCollection);
+        title = create('h1',{
+            innerHTML:  word + '<span class="clear">&#x2715;</span>'
+        });
+        title.addEventListener('click', printAll);
 
-        div.className = 'portfolio-section';
+        div = create('div',{
+            className: 'portfolio-section'
+        });
         div.appendChild( title );
         
-        console.log( word, tagLookup );
-        div.appendChild( printProjects(tagProjects) );
+        div.appendChild( printProjects(tagProjects, true) );
 
         rendering.innerHTML = '';
         rendering.appendChild(div);
 
-        document.body.scrollTop = 0;
-    };
-
-    printAll = function(data){
-        var frag = document.createDocumentFragment(),
-            i;
-
-        for( i = 0; i < data.length; i++ ){
-            frag.appendChild( printSection( data[i] ));
-        }
-
-        firstRender = false;
-        return frag;
+        doc.body.scrollTop = 0;
     };
 
     printSection = function(section){
-        var div = document.createElement('div'),
-            title = document.createElement('h2');
+        var div = doc.createElement('div');
 
-        title.innerHTML = section.title;
-
-        div.id = section.id;
-        div.className = 'portfolio-section';
-        div.appendChild( title );
+        div = create('div', {
+            id: section.id,
+            className: 'portfolio-section'
+        });
+        div.appendChild( create('h1', {
+            innerHTML: section.title
+        }));
 
         div.appendChild( printProjects(section.projects) );
         return div;
     };
 
-    printProjects = function(tagProjects){
-        var frag = document.createElement('div'),
+    printProjects = function(tagProjects, dramatic){
+        var frag = doc.createElement('div'),
+            showProject,
+            projDiv,
             i;
 
-        console.log( 'len', tagProjects, tagProjects.length );
+        showProject = function(toShow){
+            return function(){
+                toShow.className = 'portfolio-project';
+            };
+        };
 
         for( i = 0; i < tagProjects.length; i++ ){
-            //console.log( i );
-            if( i > 100 ){
-                return;
+            projDiv = printProject( tagProjects[i], dramatic );
+            frag.appendChild( projDiv );
+            if( dramatic ){
+                setTimeout( showProject(projDiv), (i+1) * 100 );
             }
-            frag.appendChild( printProject( tagProjects[i] ));
         }
 
         return frag;
     };
 
-    printProject = function(project){
-        var div   = document.createElement('div'),
-            title = document.createElement(project.link? 'a':'p'),
-            descr = document.createElement('p'),
+    printProject = function(project, dramatic){
+        var div,
+            title,
+            descr,
             word,
             tags,
             tag,
             i;
 
-        title.className = 'project-title';
-        title.innerHTML = project.name;
-        if( project.link ){
-            title.href = project.link;
-            title.target = '_blank';
-        }
-
-        descr.className = 'project-description';
-        descr.innerHTML = project.description;
-
-        div.className = 'portfolio-project two-third-column';
-        div.appendChild( title );
-        div.appendChild( descr );
+        div = create('div',{
+            className: 'portfolio-project' + (dramatic ? ' hide' : '')
+        });
+        div.appendChild( create(project.link? 'a':'p', {
+            className: 'project-title',
+            innerHTML: project.name,
+            target: '_blank',
+            href: project.link || ''
+        }));
+        div.appendChild( create('p',{
+            className: 'project-description',
+            innerHTML: project.description
+        }));
 
         if( project.tags ){
-            tags  = document.createElement('div');
-            tags.className = 'tags';
+            tags  = create('div', {
+                className: 'tags'
+            });
 
             for( i = 0; i < project.tags.length; i++ ){
                 word = project.tags[i];
                 word = word.toLowerCase();
 
-                tag = document.createElement('b');
-                tag.className = 'tag';
+                tag = create('b', {
+                    className: 'tag',
+                    innerHTML: word
+                });
                 tag.setAttribute('data-key', word);
-                tag.innerHTML = word;
                 tag.addEventListener('click', printTagCollection);
-
                 tags.appendChild( tag );
-
-                if( firstRender ){
-                    if( !tagLookup[word] ){
-                        tagLookup[word] = [];
-                        tagCount[word] = 0;
-                    }
-                    tagLookup[word].push(project);
-                    tagCount[word]++;
-                }
             }
-
             div.appendChild( tags );
         }
-     
         return div;
     };
 
     printAllTags = function(){
-        var frag = document.createDocumentFragment(),
+        var frag = doc.createDocumentFragment(),
             tagsSorted = [],    
             tagButton,
             key,
@@ -479,23 +497,116 @@ var data =
 
         for( key in tagLookup ){
             if( tagLookup.hasOwnProperty(key) ){
-                tagsSorted.push(key);
+                tagsSorted.push(tagLookup[key]);
             }
         }
         tagsSorted.sort(function(a,b){
-            return tagCount[a] < tagCount[b] ? 1 : (tagCount[a] > tagCount[b] ? -1 : 0);
+            return a.count < b.count ? 1 : (a.count > b.count ? -1 : 0);
         });
+
         for( i = 0; i < tagsSorted.length; i++ ){
-            tagButton = document.createElement('b');
-            tagButton.className = 'tag';
-            tagButton.innerHTML = tagsSorted[i] + '<span>' + tagCount[tagsSorted[i]] + '</span>';
+            tagButton = create('b', {
+                className: 'tag',
+                innerHTML: tagsSorted[i].word + '<span>' + tagsSorted[i].count + '</span>'
+            });
+            tagButton.setAttribute('data-key', tagsSorted[i].word);
+            tagButton.addEventListener('click', printTagCollection)
             frag.appendChild(tagButton);
         }
-        return frag;
+
+        $('tag-list').appendChild( frag );
     };
 
-    rendering.appendChild( printAll(data) );
-    document.getElementById('tag-list').appendChild( printAllTags() );
+    handleSectionClick = function(e){
+        if( !e || !e.target ){
+            return;
+        }
+
+        var word = e.target.getAttribute('data-key'),
+            sectionData = data[word],
+            div;
+
+        div = printSection(sectionData);
+        rendering.innerHTML = '';
+        rendering.appendChild(div);
+    };
+
+    printAllCategories = function(){
+        var frag = doc.createDocumentFragment(),
+            catButton,
+            cat,
+            key;
+
+        for( key in data ){
+            if( data.hasOwnProperty(key) ){
+                cat = data[key];
+                if( !cat.tagTitle ){ continue; }
+                catButton = create('b', {
+                    className: 'tag',
+                    innerHTML: cat.tagTitle + '<span>' + cat.projects.length + '</span>'
+                });
+                catButton.setAttribute('data-key', key);
+                catButton.addEventListener('click', handleSectionClick)
+                frag.appendChild(catButton);
+            }
+        }
+
+        $('cat-list').appendChild( frag );
+
+        $('all').addEventListener( 'click', printAll );
+
+        $('more').addEventListener( 'click', function(){
+            $('tag-overflow').className = 'open';
+
+            var hide = function(){
+                $('tag-overflow').className = '';
+                document.body.removeEventListener( 'click', hide);
+            };
+            setTimeout(function(){
+                document.body.addEventListener( 'click', hide);
+            },10);
+        });
+
+    };
+
+    printAll = function(){
+        var frag = doc.createDocumentFragment(),
+            i;
+
+        for( i = 0; i < data.length; i++ ){
+            frag.appendChild( printSection( data[i] ));
+        }
+
+        rendering.innerHTML = '';
+        rendering.appendChild( frag );
+    };
+
+    parseTags = function(){
+        var category, project, tag, word;
+        for( i = 0; i < data.length; i++ ){
+            category = data[i];
+            for( j = 0; j < category.projects.length; j++ ){
+                project = category.projects[j];
+                for( k = 0; k < project.tags.length; k++ ){
+                    word = project.tags[k].toLowerCase();
+                    if( !tagLookup[word] ){
+                        tagLookup[word] = {
+                            word: word,
+                            count: 0,
+                            projects: []
+                        };
+                    }
+                    tagLookup[word].projects.push(project);
+                    tagLookup[word].count++;
+                }
+            }
+        }
+    }
+
+    parseTags();
+    printAll();
+    printAllCategories();
+    printAllTags();
 }());
 
 </script>

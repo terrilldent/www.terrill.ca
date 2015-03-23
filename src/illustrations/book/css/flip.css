@@ -43,14 +43,32 @@
         right: 0;
         left: auto;
         -webkit-perspective-origin: 0% center;
+           -moz-perspective-origin: 0% center;
+            -ms-perspective-origin: 0% center;
+             -o-perspective-origin: 0% center;
+                perspective-origin: 0% center;
+
         -webkit-transform-origin: 0% center;
+           -moz-transform-origin: 0% center;
+            -ms-transform-origin: 0% center;
+             -o-transform-origin: 0% center;
+                transform-origin: 0% center;
         }
     .page-wrapper.left{
         width: 50%;
         right: auto;
         left: 0;
         -webkit-perspective-origin: 100% center;
+           -moz-perspective-origin: 100% center;
+            -ms-perspective-origin: 100% center;
+             -o-perspective-origin: 100% center;
+                perspective-origin: 100% center;
+
         -webkit-transform-origin: 100% center;
+           -moz-transform-origin: 100% center;
+            -ms-transform-origin: 100% center;
+             -o-transform-origin: 100% center;
+                transform-origin: 100% center;
         }
     .page-wrapper.right .page{
         margin: 0 -100%;

@@ -56,6 +56,7 @@ body {
     float: left;
     }
 .two-third-column {
+    width: 60%;
     vertical-align: top;
     display: inline-block;
     float: left;
@@ -71,7 +72,7 @@ body {
 /* ----- HEADER ------ */
 
 .header {
-    padding: 10px 0 10px;
+    padding: 10px 0 0;
     border-bottom: 1px solid #EEE;
     background-color: #FFF;
 }
@@ -94,42 +95,26 @@ nav{
     text-align: right;
 }
 .nav-link {
-    padding: 13px .4em 7px;
+    padding: 13px .4em 15px;
     margin: 0 .4em;
     white-space: nowrap;
     display: inline-block;
     position: relative;
     vertical-align: top;
+    border-bottom: 2px solid transparent;
+    transition: all .15s linear;
+    color: #000;
 
     &.current {
         color: #000;
-
-        &:after{
-            content:'';
-            display: inline-block;
-            position: absolute;
-            bottom: 0px;
-            right: 47%;
-            background: #000;
-            width: 4px;
-            height: 4px;
-            border-radius: 2px;
-        }
+        border-bottom: 2px solid #EEE;
     }
     &:hover {
         text-decoration: none;
-
-        &:after{
-            content:'';
-            display: inline-block;
-            position: absolute;
-            bottom: 0px;
-            right: 47%;
-            background: #888;
-            width: 4px;
-            height: 4px;
-            border-radius: 2px;
-        }
+        border-bottom: 2px solid #CCC;
+    }
+    &.last {
+        margin-right: 0;
     }
 }   
 
@@ -185,11 +170,12 @@ p{
     a{
         color: #000;
         text-decoration: none;
-        box-shadow: inset 0 -3px 0 #CCE;
-    
+        box-shadow: inset 0 -1px 0 #CCE;
+        transition: all .15s linear;
+
         &:hover{
             text-decoration: none;
-            box-shadow: inset 0 -7px 0 #CCE;
+            box-shadow: inset 0 -20px 0 #DDE;
         }
     }
 }
@@ -199,24 +185,26 @@ p{
 
 
 .post {
-    margin: 2em 0 2em 0;
+    margin: 2em 0 6em 0;
 
     &.hasimage{
         margin-top: 0;     
     }
     &.hasimage .post-body{
-        box-shadow: 0px -1px 3px -2px rgba( 0, 0, 0, .7 );
+        box-shadow: 0px -1px 2px -2px rgba( 0, 0, 0, .5 );
     }
 }
 
 .post-body {
     background: #FFF;
     position: relative;
-    padding: 15px;
+    padding: 15px 15px 0;
     margin: 0 1em;
 
     &:after{
         content: '\2014';
+        text-align: center;
+        display: none;
     }
     &.full{
         margin: 200px 0 0 0;
@@ -413,8 +401,25 @@ pre {
 
 /* ----- PROJECT LIST ------ */
 
-#tag-list{
-    display: none;
+#sub-nav{
+    text-align: center;
+    padding: 10px 0; 
+}
+#tag-overflow{
+    position: relative;
+}
+.open #tag-list{
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba( 0, 0, 0, .3 );
+    border-radius: 4px;
+    .tag{
+        display: block;
+        text-align: left;
+    }
 }
 
 .tag{
@@ -422,57 +427,99 @@ pre {
     padding: 0 4px;
     font-size: .6em;
     text-transform: uppercase;
-    background: #BBB;
-    color: #FFF;
+    color: #999;
     border-radius: 2px;
-    margin: 3px;
+    margin: 8px 8px 0 -4px;
     height: 18px;
     line-height: 18px;
     letter-spacing: .5px;
     cursor: pointer;
+    white-space: nowrap;  
+
+    &:hover{
+        background: #CCE;
+        color: #FFF;
+    }
 
     span{
-        background: #BBB;
+        float: right;
+        background: #CCC;
         margin: 0 -4px 0 4px;
         display: inline-block;
         vertical-align: top;
-        height: 18px;
-        line-height: 18px;
         padding: 0 4px;
         border-radius: 0 2px 2px 0;
     }
 }
 
-.portfolio-section{
-    overflow: hidden;
-    border-bottom: 1px solid #CCC;
+#sub-nav{
+    display: none;
+}
+#tag-list{
+    display: none;
+    width: 7em;
+}
 
-    h2{
-        font-size: 2em;
-        margin: 1em 0 .5em 0;
+#all.tag,
+#more.tag,
+#cat-list .tag{
+    background: #CCC;
+    color: #FFF;
+
+    &:hover{
+        background: #CCE;
+        color: #FFF;
+        span{
+            background: #CCE;
+        }
+    }
+}
+
+.portfolio-section{
+    padding-bottom: 3em;
+
+    h1{
+        text-transform: capitalize;
     }
 
     .portfolio-project{
-        padding: 1em 0;
+        padding: 1em 0 2em;
+        clear: both;
+        transition: opacity .2s linear;
+    }
+    .portfolio-project.hide{
+        opacity: 0;
     }
 
     .clear{  
         border: 2px solid #000;
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
         text-align: center;
         border-radius: 15px;
         display: inline-block;
-        line-height: 1.3em;
+        line-height: 20px;
         margin-left: .5em;
-        font-size: 20px;
+        font-size: 18px;
         cursor: pointer;
         vertical-align: middle;
+
+        &:hover{
+            background: #CCF;
+            color: #FFF;
+            border-color: #CCF;
+        }
     }
 
     .project-title{
         font-size: 1.4em;
         margin: 0;
+        color: #449;
+
+        &:hover{
+            text-decoration: none;
+            box-shadow: inset 0 -2px 0 #CCE;
+        }
     }
     .project-description{
         padding: .5em 0;
@@ -597,22 +644,15 @@ pre {
         margin-top: 1em;
     }
 
-    /* -- One Column Projects -- */
-    .projects-list dt,
-    .projects-list dd{
-        padding: 1em 0;
-        display: block;
-        width: auto;
-        }
-    .projects-list dt{
-        padding-bottom: 0;
-        font-weight: bold;
-        color: #000;
-        }
-    .projects-list dd{
-        padding-top: .5em;
-        color: #444;
-        }
+    .tag{
+        padding: 0 4px;
+        font-size: .7em;
+        border-radius: 3px;
+        margin: 4px;
+        height: 22px;
+        line-height: 22px;
+        cursor: pointer;
+    }
 
     .half-column {
         width: auto;
