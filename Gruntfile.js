@@ -92,7 +92,10 @@ module.exports = function( grunt ){
                 debounceDelay: 250
             },
             clientjs: {
-                files: ['src/**/*.js'],
+                files: ['src/**/*.js', 
+                        'src/**/*.php', 
+                        'src/**/*.png', 
+                        'src/**/*.jpg' ],
                 tasks: ['jslint', 'copy']
             },
             clienthtml: {
