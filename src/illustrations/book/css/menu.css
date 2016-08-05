@@ -1,19 +1,19 @@
 
 /* --------------- MENU BEHAVIOUR -------------- */
 
-#app ,
+#book ,
 #menu {
     position: absolute;
     top: 0;
     left: 0;
     }
 
-    #app {
-        -webkit-transition: -webkit-transform 0.65s ease-out;
-           -moz-transition:    -moz-transform 0.65s ease-out;
-                transition:         transform 0.65s ease-out;
+    #book {
+        -webkit-transition: -webkit-transform 0.30s ease-out;
+           -moz-transition:    -moz-transform 0.30s ease-out;
+                transition:         transform 0.30s ease-out;
         }
-        .show-menu #app {
+        .show-menu #book {
             -webkit-transform: translate3D( -400px, 0, 0 );
                -moz-transform: translate3D( -400px, 0, 0 );
                     transform: translate3D( -400px, 0, 0 );
@@ -35,18 +35,18 @@
            -moz-transform-origin: 0% center;
                 transform-origin: 0% center;
         
-        -webkit-transition: -webkit-transform 0.5s ease-in;
-           -moz-transition:    -moz-transform 0.5s ease-in;
-                transition:         transform 0.5s ease-in;
+        -webkit-transition: -webkit-transform 0.3s ease-in;
+           -moz-transition:    -moz-transform 0.3s ease-in;
+                transition:         transform 0.3s ease-in;
         
-        -webkit-transform: perspective(3000) rotateY( 30deg );
-           -moz-transform: perspective(3000) rotateY( 30deg );
-                transform: perspective(3000) rotateY( 30deg );
+        -webkit-transform: translateX(0px) perspective(3000) rotateY( 30deg );
+           -moz-transform: translateX(0px) perspective(3000) rotateY( 30deg );
+                transform: translateX(0px) perspective(3000) rotateY( 30deg );
         }        
         .show-menu #menu {
-            -webkit-transform: perspective(3000) rotateY( 0deg );
-               -moz-transform: perspective(3000) rotateY( 0deg );
-                    transform: perspective(3000) rotateY( 0deg );
+            -webkit-transform: translateX(0px) perspective(3000) rotateY( 0deg );
+               -moz-transform: translateX(0px) perspective(3000) rotateY( 0deg );
+                    transform: translateX(0px) perspective(3000) rotateY( 0deg );
             }     
     #menu.hidden {
         display: none;

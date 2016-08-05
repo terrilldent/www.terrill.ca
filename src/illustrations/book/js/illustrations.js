@@ -57,8 +57,10 @@ illustrations = (function()
                     return;
                 } 
                 if( currentIndex > index ) {
-                    flip.close();
-                    delay = 700;
+                    setTimeout( function() {
+                        flip.close();
+                    }, delay );                    
+                    delay = +900;
                 }
                 setTimeout( function() {
                     flip.push( pages[ index ] );
@@ -73,15 +75,12 @@ illustrations = (function()
 
             miro.remove( bookPagesParent );
             while( bookPagesParent.firstElementChild ) {
-                //console.log( bookPagesParent.firstElementChild );
                 pages.push( createPage( bookPagesParent.firstElementChild, pageIndex ) );
                 pageIndex++;
             }
 
-            //console.log( pages );
-
             // Show the first page
-            flip.init( $('all-pages'), $('flip-pages'), $('shadow'), pages[ 0 ] );
+            flip.init( $('book'), pages[ 0 ] );
         }
     };
 }());
