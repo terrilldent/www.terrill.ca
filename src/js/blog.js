@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(){
         e.stopPropagation();
     };
 
-    closeIllustration = function(e){
+    closeIllustration = function(){
         if( popup ){
             popup.className = '';
         }
@@ -141,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function(){
         if( !popup ){
             popup = doc.createElement('div');
             popup.id = 'popup-wrapper';
-
             spark.button.create(popup,closeIllustration);
         }
         popup.innerHTML = '<div class="popup" style="background-image:url(' + target.src + ');"></div>';

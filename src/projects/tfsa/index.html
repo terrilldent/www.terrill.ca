@@ -1,6 +1,7 @@
 ---
 layout: default
 title: TFSA Contribution Limit Calculator
+excerpt: Online TFSA contribution room calculator. See your total  contribute limit and this years additional space. Helpful links to more TFSA content.
 ---
 
 
@@ -19,7 +20,7 @@ title: TFSA Contribution Limit Calculator
         display: inline-block;
     }
     select {
-        font-size: 1em;   
+        font-size: 1em;
         padding: 5px 10px;
         margin: 0 .5em;
         box-shadow: 0 1px 2px #444;
@@ -56,12 +57,13 @@ title: TFSA Contribution Limit Calculator
     <div id="results">
         <p><span class="label">You turned 18 in:</span> <span id="eighteen" class="result"></span></p>
         <p><span class="label">Your total limit is:</span> <span id="total" class="result"></span></p>
-        <p><span class="label">Your limit this year:</span> <span id="thisyear" class="result">$5500</span></p>
-    </div>  
+    </div>
 
     <h2>More Resources</h2>
     <p>From 2009-2012 inclusive, the contribution limit was $5,000.</p>
-    <p>From 2013+ inclusive, the contribution limit is $5,500.</p>
+    <p>From 2013-2014 inclusive, the contribution limit was $5,500.</p>
+    <p>From 2015, the contribution limit was $10,000.</p>
+    <p>From 2016, the contribution limit is $5,500.</p>
     <p>Unused contributions accumulate and never expire. Withdrawals count against your contribution room the following year.</p>
     <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/cntrbtn-eng.html">CRA TFSA Information</a></p>
     <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/xmpl-eng.html">Contribution Room Examples</a></p>
@@ -85,21 +87,33 @@ var tfsa = (function(){
 
     calculate = function(e){
         var turned18 = parseInt(year.value,10) + 18;
-        eighteen.textContent = turned18;
+        var room = 0;
 
         var start = Math.max( turned18, 2009 );
-        var lessthan2012 = 2012 - start + 1;
-        var room = 0;
-        if( lessthan2012 > 0 ){
-            room = 5000 * lessthan2012;
+        var lessthanTarget = 2012 - start + 1;
+        if( lessthanTarget > 0 ){
+            room = 5000 * lessthanTarget;
+        }
+
+        start = Math.max( turned18, 2013 );
+        lessthanTarget = 2014 - start + 1;
+        if( lessthanTarget > 0 ){
+            room += 5500 * lessthanTarget;
+        }
+
+        start = Math.max( turned18, 2015 );
+        lessthanTarget = 2015 - start + 1;
+        if( lessthanTarget > 0 ){
+            room += 10000 * lessthanTarget;
         }
 
         var now = (new Date()).getFullYear();
-        var after2012 = now - Math.max( start, 2013 ) + 1;
-        if( after2012 > 0 ){
-            room += 5500 * after2012
+        lessthanTarget = now - Math.max( turned18, 2016 ) + 1;
+        if( lessthanTarget > 0 ){
+            room += 5500 * lessthanTarget
         }
 
+        eighteen.textContent = turned18;
         total.textContent = money(room);
     };
 

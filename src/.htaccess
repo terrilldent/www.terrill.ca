@@ -1,7 +1,10 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^blog/(.*)$ /post.php?id=$1 [L]
+#RewriteRule ^blog/(.*)$ /post.php?id=$1 [L]
+
+# Redirect Service
+RewriteRule ^l/([a-zA-Z0-9\-]+)$ /l/index.php?id=$1 [L]
 
 # Block Browsing Git Directories
 RedirectMatch 404 /\.git
@@ -18,4 +21,3 @@ RedirectMatch permanent ^/posts/backgrounds/?$ http://www.terrill.ca/design/back
 RedirectMatch permanent ^/articles/html_resume/?$ http://www.terrill.ca/design/html_resume/
 RedirectMatch permanent ^/posts/google_analytics.html http://www.terrill.ca/projects/
 RedirectMatch permanent ^/posts/google_analytics.php http://www.terrill.ca/projects/
-

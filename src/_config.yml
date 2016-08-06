@@ -3,7 +3,8 @@ title: Terrill Dent
 email: your-email@domain.com
 name: Terrill Dent
 description: > #
-  The personal website of Terrill Dent, a software developer with an entrepreneurial spirit in Waterloo Ontario.
+  The personal website of <a href=
+  "/about">Terrill Dent</a>, a software developer in Waterloo Ontario.
 baseurl: ""
 destination: "../build/"
 url: "http://www.terrill.ca"
@@ -15,3 +16,6 @@ paginate_path: "/blog/page:num/"
 
 # Build settings
 markdown: kramdown
+
+# Gems
+gems: [jekyll-paginate]

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects
+excerpt: A list of projects that Terrill has worked on. From the complex to the beautiful, all written with care.
 ---
 
 <div id="sub-nav">
@@ -17,17 +18,116 @@ title: Projects
 </div>
 
 <script type="text/javascript">
-var data = 
+var data =
 [
-    { 
+    {
+        id: 'web',
+        tagTitle: 'Web/Server',
+        title: "Web &amp; Server Projects",
+        projects: [
+            {
+                name: 'Aeryon Live',
+                link: 'https://www.aeryon.com/aeryonlive',
+                description: 'Worked with Aeryon to launch their innovative real-time video and telemetry platform for UAVs. Created complete visual language, and overhauled the UI layer.',
+                tags: [
+                    'Design',
+                    'JS',
+                    'CSS',
+                    'React',
+                    'Graphics',
+                    'Contracting'
+                ]
+            },
+            {
+                name: 'Square Cash',
+                link: 'https://cash.me',
+                description: 'I am currently full time at Square where I am part of the Cash team. We\'re creating new kinds of financial products that help enable commerce.',
+                tags: [
+                    'Ember',
+                    'JS',
+                    'CSS',
+                    'API',
+                    'Java'
+                ]
+            },
+            {
+                name: 'BlackSeal Authenticity Service',
+                link: 'https://blackseal.trustpoint.ca/',
+                description: 'Created a strong digital+physical authenticity SaaS product from the ground up, combining NFC and Cryptographic Signatures into a provable authenticity product for luxury goods.',
+                tags: [
+                    'JS',
+                    'CSS',
+                    'Node',
+                    'MongoDB',
+                    'Docker',
+                    'Design',
+                    'UX',
+                    'API',
+                    'Graphics'
+                ]
+            },
+            {
+                name: 'Certificate Authority',
+                link: 'http://www.trustpointinnovation.com/m2m-certificate-authority/',
+                description: 'Built a Certificate Authority in the cloud, for a new generation of secure services that require Signatures and Certificates. Took a typically offline service online with careful attention to security.',
+                tags: [
+                    'Java',
+                    'Docker',
+                    'Crypto',
+                    'PostgreSQL',
+                    'API',
+                    'Tomcat'
+                ]
+            },
+            {
+                name: 'Ten Thousand Coffees',
+                link: 'https://www.tenthousandcoffees.com',
+                description: 'Helped launch Ten Thousand Coffees, a social network connecting the leaders of today with the leaders of tomorrow. A high performance, single page, javascript intensive web application.',
+                tags: [
+                    'Node',
+                    'Backbone',
+                    'MongoDB',
+                    'JS',
+                    'CSS',
+                    'Contracting'
+                ]
+            },
+            {
+                name: 'flip.js',
+                link: 'https://github.com/terrilldent/flip.js',
+                description: 'An open source JavaScript library to simulate page flipping. Mobile-first, touch friendly design, optimized for performance. Easily create a flipboard like experience using only web technologies, with no library dependencies.',
+                tags: [
+                    'JS',
+                    'CSS',
+                    'UX',
+                    'Animation',
+                    'Open Source'
+                ]
+            },
+            {
+                name: 'write',
+                link: 'https://github.com/terrilldent/write',
+                description: 'Created an open source blogging engine for non-https websites. Provides strong authenticity and integrity protection - without the use of certificates. Applicable for the many cases where confidentiality is not required.',
+                tags: [
+                    'PHP',
+                    'MySQL',
+                    'JS',
+                    'CSS',
+                    'Crypto',
+                    'Open Source'
+                ]
+            }
+        ]
+    },
+    {
         id: 'mobile',
         title: 'Mobile Apps',
         tagTitle: 'Mobile',
         projects: [
-            { 
-                name: 'BlackSeal NFC',
+            {
+                name: 'BlackSeal Android App',
                 link: 'https://play.google.com/store/apps/details?id=com.trustpoint.blackseal',
-                description: 'An Android application that is used to write and verify cryptographically significant NFC tags.',
+                description: 'An Android application that is used to write and verify cryptographically significant NFC tags. Connects to web services, provides the ability to detect counterfeit goods.',
                 tags: [
                     'Android',
                     'NFC',
@@ -37,10 +137,10 @@ var data =
                     'Crypto'
                 ]
             },
-            { 
+            {
                 name: 'Heffner Toyota',
                 link: 'https://itunes.apple.com/ca/app/heffner-toyota-kitchener-waterloo/id629628628?mt=8',
-                description: 'The Heffner Toyota Application was built from scratch using web technologies - no libraries were used, focus on performance.',
+                description: 'The Heffner Toyota Application was built from scratch using web technologies - no libraries were used, focus on performance. A cross platform mobile app with responsive UI that looks good on any screen. Customized to appear native on three platforms - using one codebase.',
                 tags: [
                     'HTML',
                     'JS',
@@ -52,10 +152,10 @@ var data =
                     'UX'
                 ]
             },
-            { 
+            {
                 name: 'BlackBerry Bridge',
                 link: 'http://appworld.blackberry.com/webstore/content/19435/',
-                description: 'Front End Web + UX development. Battle-ready JavaScript. Six brand new apps from Scratch. Inventing new forms of device-to-device interaction.',
+                description: 'Front End Web + UX development. Battle-ready JavaScript. Created suite of six office apps from scratch (mail, calendar, tasks, chat, memos). Inventing new forms of device-to-device interaction.',
                 tags: [
                     'HTML',
                     'CSS',
@@ -69,7 +169,7 @@ var data =
             {
                 name: 'Facebook for BlackBerry',
                 link: 'https://appworld.blackberry.com/webstore/content/680/?countrycode=CA&lang=en',
-                description: 'I helped create the first version of Facebook for BlackBerry, before there was an App Store.',
+                description: 'I helped create the first version of Facebook for BlackBerry, before there was an App Store. Pioneered different forms of UI and interaction on pre-touchscreen devices. Innovative event delivery mechanism and use of APIs.',
                 tags: [
                     'Java',
                     'BlackBerry',
@@ -80,125 +180,42 @@ var data =
             {
                 name: 'BlackBerry BBM Groups',
                 link: 'http://ca.blackberry.com/bbm.html',
-                description: 'I helped pioneer one-to-many communication between groups of people on mobile devices, now part of BBM.',
+                description: 'I helped pioneer one-to-many communication between groups of people on mobile devices, now part of BBM. Creating experiences that scale from two people to many people.',
                 tags: [
                     'Java',
                     'Graphics',
                     'BlackBerry',
                     'Patents'
                 ]
-            }
-        ]
-    },
-    { 
-        id: 'web',
-        tagTitle: 'Web/Server',
-        title: "Web &amp; Server Projects",
-        projects: [
-            {
-                name: 'BlackSeal Authenticity Service',
-                link: 'https://blackseal.trustpoint.ca/',
-                description: 'An authenticity service combining NFC and Digital Signatures adding provable authenticity to luxury goods.',
-                tags: [
-                    'JS',
-                    'CSS',
-                    'Node',
-                    'MongoDB',
-                    'Docker',
-                    'Design',
-                    'UX',
-                    'Graphics'
-                ]
             },
             {
-                name: 'Certificate Authority',
-                link: 'http://www.trustpointinnovation.com/m2m-certificate-authority/',
-                description: 'Built a Certificate Authority in the cloud, for a new generation of secure products that require Signatures and Certificates.',
-                tags: [
-                    'Java',
-                    'Docker',
-                    'Crypto',
-                    'PostgreSQL',
-                    'Tomcat'
-                ]
-            },
-            {
-                name: 'Ten Thousand Coffees',
-                link: 'https://www.tenthousandcoffees.com',
-                description: 'Helped launch Ten Thousand Coffees, a social network connecting the leaders of today with the leaders of tomorrow.',
-                tags: [
-                    'Node',
-                    'Backbone',
-                    'MongoDB',
-                    'JS',
-                    'CSS'
-                ]
-            },
-            {
-                name: 'write',
-                link: 'https://github.com/terrilldent/write',
-                description: 'A blogging engine for non-https websites. Provides authenticity and integrity protection - but not confidentiality.',
-                tags: [
-                    'PHP',
-                    'MySQL',
-                    'JS',
-                    'CSS',
-                    'Crypto'
-                ]
-            }
-        ]
-    },
-    { 
-        id: 'ux',
-        tagTitle: 'Design/UX',
-        title: 'Design &amp; UX Prototyping',    
-        projects: [
-            {
-                name: 'Illustrations Book',
-                link: '/illustrations/',
-                description: 'Using my page flipping library to create a digital book of my artwork. ',
-                tags: [
-                    'JS',
-                    'Animation',
-                    'CSS'
-                ]
-            },
-            {
-                name: 'BlackBerry Advanced Java UI',
+                name: 'BlackBerry UI Component Library',
                 link: 'https://github.com/blackberry/Samples-for-Java/tree/master/Advanced%20UI',
-                description: 'BlackBerry was missing some controls and components. I helped bring them to the community and evangelize at conferences. <a href="http://supportforums.blackberry.com/t5/Java-Development/Implement-advanced-buttons-fields-and-managers/ta-p/488276">Screenshots</a>',
+                description: 'BlackBerry was missing critical UI controls and components. I open sourced a large library of UI components for the community, and evangelized design and UI development at conferences around the world. <a href="http://supportforums.blackberry.com/t5/Java-Development/Implement-advanced-buttons-fields-and-managers/ta-p/488276">Screenshots</a>.',
                 tags: [
                     'Java',
                     'Graphics',
                     'Animation',
-                    'BlackBerry'
+                    'BlackBerry',
+                    'Open Source'
                 ]
             },
             {
                 name: 'BlackBerry Clock',
-                description: 'Close collaboration between developers and designers lead to a beautiful product in a short timespan. This project was a lot of fun, with some of the first animated UI on BlackBerry.',
+                description: 'Close collaboration between developers and designers lead to a beautiful product in a short timespan. This project involved some of the first animated UI on BlackBerry. Included a stopwatch and timer.',
                 tags: [
                     'Java',
                     'Animation',
                     'Design',
                     'BlackBerry'
                 ]
-            },
-            {
-                name: 'flip.js',
-                link: 'https://github.com/terrilldent/flip.js',
-                description: 'A JavaScript library to simulate page flipping. Mobile-first, performance focused design.',
-                tags: [
-                    'JS',
-                    'CSS'
-                ]
             }
         ]
     },
-    { 
+    {
         id: 'books',
         tagTitle: 'Books/IP',
-        title: 'Books & I.P.',    
+        title: 'Books, I.P. and Art',
         projects: [
             {
                 name: 'Intellectual Property',
@@ -218,18 +235,28 @@ var data =
                     'Maps',
                     'JS'
                 ]
+            },
+            {
+                name: 'Illustrations Book',
+                link: '/illustrations/',
+                description: 'Using my <a href="/flipjs/">flipjs</a> page flipping library to create a digital book of my real life physical artwork.',
+                tags: [
+                    'JS',
+                    'Animation',
+                    'CSS'
+                ]
             }
         ]
     },
-    { 
+    {
         id: 'design',
-        title: 'Early Code and Design',    
+        title: 'Early Code and Design',
         description: 'Projects that I did in 2005-2009 while developing my programming skills and learning about design in general.',
         projects: [
             {
                 name: 'HTML Vertical Bar Graphs',
                 link: '/design/vertical_bar_graphs/',
-                description: 'Using HTML and CSS to create vertical bar graphs. Example PHP to generate from data sources',
+                description: 'Using HTML and CSS to create vertical bar graphs with many different styles. PHP can be used to generate graphs from data sources',
                 tags: [
                     'PHP',
                     'CSS'
@@ -238,15 +265,16 @@ var data =
             {
                 name: 'HTML Table Sorter',
                 link: '/sorting/',
-                description: 'Using javascript to sort HTML tables on the client side',
+                description: 'Open source project - use javascript to sort HTML tables client side. Includes a javascript implementation of quicksort.',
                 tags: [
-                    'JS'
+                    'JS',
+                    'Open Source'
                 ]
             },
             {
                 name: 'Repeatable Backgrounds',
                 link: '/design/backgrounds/',
-                description: 'Some repeatable background tiles and textures',
+                description: 'Repeatable background tiles and textures. A fun little project to better understand how patterns fit together.',
                 tags: [
                     'Graphics'
                 ]
@@ -254,7 +282,7 @@ var data =
             {
                 name: 'MSN Messenger Skins',
                 link: 'http://terrill.deviantart.com/gallery/',
-                description: 'Complete themes for Microsoft\'s MSN Messenger program. Some used by hundreds of thousands of people.',
+                description: 'Complete themes for Microsoft\'s MSN Messenger program. Some downloaded and used by hundreds of thousands of people.',
                 tags: [
                     'Design',
                     'Graphics',
@@ -270,12 +298,12 @@ var data =
                     'Design',
                     'CSS'
                 ]
-            }       
+            }
         ]
     },
-    { 
+    {
         id: 'earlyweb',
-        title: 'Early Websites',    
+        title: 'Early Websites',
         description: 'A collection of websites I created between 2005 and 2010.',
         projects: [
             {
@@ -312,7 +340,7 @@ var data =
             },
             {
                 name: 'Xtron Imaging Website',
-                description: 'A complete website for Xtron Imaging, makers of health imaging equiment.',
+                description: 'A complete website for Xtron Imaging, makers of health imaging equipment.',
                 tags: [
                     'HTML',
                     'CSS'
@@ -330,7 +358,7 @@ var data =
             },
             {
                 name: 'Cruise Miss Toronto',
-                description: 'Website and Toronto Harbourfront Panorama using Google Maps',
+                description: 'Website and Toronto Harbour front Panorama using Google Maps',
                 tags: [
                     'JS',
                     'Maps',
@@ -344,10 +372,10 @@ var data =
 
 (function(){
     var tagLookup = {},
-        
+
         doc = document,
         rendering = doc.getElementById('rendering'),
-        
+
         $,
         create,
         printAll,
@@ -396,7 +424,7 @@ var data =
             className: 'portfolio-section'
         });
         div.appendChild( title );
-        
+
         div.appendChild( printProjects(tagProjects, true) );
 
         rendering.innerHTML = '';
@@ -490,7 +518,7 @@ var data =
 
     printAllTags = function(){
         var frag = doc.createDocumentFragment(),
-            tagsSorted = [],    
+            tagsSorted = [],
             tagButton,
             key,
             i;
@@ -610,5 +638,3 @@ var data =
 }());
 
 </script>
-
-
