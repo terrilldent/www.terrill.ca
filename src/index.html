@@ -2,27 +2,45 @@
 layout: default
 bodyClass: blog
 nav: blog
+hideFooter: hide
 ---
 
-  <div class="wrapper">
+<div class="wrapper">
 
-  {% for post in paginator.posts %}
-    {% include post.html %}
-  {% endfor %}
+<h2>I'm a software developer in Waterloo, Ontario.</h2>
 
-  <!-- Pagination links -->
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous btn">Newer</a>
-    {% else %}
-      <span class="previous btn disabled">Newer</span>
-    {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next btn">Older</a>
-    {% else %}
-      <span class="next btn disabled">Older</span>
-    {% endif %}
+<p>I work full time for <a target="_blank" href="https://squareup.com">Square</a>, on the <a target="_blank" href="https://cash.me">Cash app</a>. On the side I run the web consultancy <a target="_blank" href="http://goosebay.co/">Goose Bay Co.</a> that specializes in JavaScript heavy projects.</p>
+
+<p>My focus is web. I've created projects spanning many waves of web technology, including: web based
+<a target="_blank" href="https://itunes.apple.com/ca/app/heffner-toyota-for-iphone/id629628628?mt=8">mobile</a>
+<a target="_blank" href="https://play.google.com/store/apps/details?id=com.miro.heffnertoyota">apps</a>,
+single-page <a href="https://www.aeryon.com/aeryonlive">web</a> <a target="_blank" href="https://cash.me">apps</a>, <a target="_blank" href="https://www.tenthousandcoffees.com/">social networks</a>,
+<a target="_blank" href="http://www.trustpointinnovation.com/">corporate websites</a>, 3D projection mapping, and continual
+<a target="_blank" href="/projects">pet projects</a></p>
+
+<p>On native mobile I have built
+<a target="_blank" href="http://appworld.blackberry.com/webstore/content/680/">social</a>
+<a target="_blank" href="http://ca.blackberry.com/bbm.html">networking</a> apps,
+<a target="_blank" href="http://appworld.blackberry.com/webstore/content/19435/">multi-device UI &amp; communication</a>, <a target="_blank" href="https://github.com/blackberry/Samples-for-Java/tree/master/Advanced%20UI">UI toolkits</a>, <a target="_blank" href="https://play.google.com/store/apps/details?id=com.trustpoint.blackseal">NFC validators</a>, and made significant contributions to
+<a target="_blank" href="http://www.google.com/?tbm=pts#hl=en&tbm=pts&sclient=psy-ab&q=Terrill+Dent&oq=Terrill+Dent&fp=8ef39aeab66ed2cf">intellectual property</a> portfolios.</p>
+
+<p>View more projects in <a href="/projects">my portfolio</a>.</p>
+
+<h2 id="contact">Let's work together</h2>
+<p>Interested in hiring a full stack web developer / designer for a project?</p>
+<p><a href="#" id="email">Enable javascript, or view source to find my email.</a></p>
+
   </div>
 
-  </div>
+<script type="text/javascript">
+window.onload = function(){
+    var email = [
+        '@gmail.com',
+        '?subject=Contact from terrill.ca',
+        'terrilldent',
+        'mailto:' ];
+
+    document.getElementById('email').href = email[ 3 ] + email[ 2 ] + email[ 0 ] + email[ 1 ];
+    document.getElementById('email').textContent = email[ 2 ] + email[ 0 ];
+};
+</script>
