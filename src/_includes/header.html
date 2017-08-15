@@ -8,12 +8,16 @@
     {% assign navproj = 'current' %}
 {% endif %}
 <header class="header">
-  <div class="wrapper">
+  <div class="content-column">
     <a class="logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
     <nav>
       <a id="blog-link" class="nav-link {{navblog}}" href="/">Home</a>
       <a id="proj-link" class="nav-link {{navproj}}" href="/projects/">Projects</a>
       <a id="illu-link" class="nav-link {{navillus}} last" href="/illustrations/">Illustrations</a>
+
+      <a class="nav-link nav-icon" href="https://github.com/{{ site.github_username }}"><span class="icon github"></span></a>
+      <a class="nav-link nav-icon" href="https://twitter.com/{{ site.twitter_username }}"><span class="icon twitter"></span></a>
+
     </nav>
   </div>
 </header>
