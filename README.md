@@ -1,19 +1,12 @@
-
-TODO
-----
-
-
-
-Install Tools
--------------
+## Install
 
 ```
+npm install
 sudo gem install jekyll --pre
 ```
 
 
-Development
------------
+## Development
 
 ```
 grunt
