@@ -60,8 +60,9 @@ excerpt: Online TFSA contribution room calculator. See your total  contribute li
 <h2>More Resources</h2>
 <p>From 2009-2012 inclusive, the contribution limit was $5,000.</p>
 <p>From 2013-2014 inclusive, the contribution limit was $5,500.</p>
-<p>From 2015, the contribution limit was $10,000.</p>
-<p>From 2016, the contribution limit is $5,500.</p>
+<p>For 2015, the contribution limit was $10,000.</p>
+<p>From 2016-2018 inclusive, the contribution limit is $5,500.</p>
+<p>From 2019, the contribution limit is $6,000.</p>
 <p>Unused contributions accumulate and never expire. Withdrawals count against your contribution room the following year.</p>
 <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/cntrbtn-eng.html">CRA TFSA Information</a></p>
 <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/xmpl-eng.html">Contribution Room Examples</a></p>
@@ -104,10 +105,16 @@ var tfsa = (function(){
             room += 10000 * lessthanTarget;
         }
 
-        var now = (new Date()).getFullYear();
-        lessthanTarget = now - Math.max( turned18, 2016 ) + 1;
+        start = Math.max( turned18, 2016 );
+        lessthanTarget = 2018 - start + 1;
         if( lessthanTarget > 0 ){
-            room += 5500 * lessthanTarget
+            room += 5500 * lessthanTarget;
+        }
+
+        var now = (new Date()).getFullYear();
+        lessthanTarget = now - Math.max( turned18, 2019 ) + 1;
+        if( lessthanTarget > 0 ){
+            room += 6000 * lessthanTarget
         }
 
         eighteen.textContent = turned18;
@@ -125,7 +132,7 @@ var tfsa = (function(){
                 option,
                 i;
 
-            for( i = 1900; i < 2015; i++ ){
+            for( i = 1900; i < 2019; i++ ){
                 option = doc.createElement('option');
                 option.value = i;
                 option.textContent = i;
