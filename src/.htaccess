@@ -11,8 +11,9 @@ RedirectMatch 404 /\.git
 
 # Old Blog Redirects
 RedirectMatch permanent ^/blog/?$ http://www.terrill.ca/
+RedirectMatch permanent ^/about http://www.terrill.ca/
 RedirectMatch permanent ^/archives.php http://www.terrill.ca/
-RedirectMatch permanent ^/contact.php http://www.terrill.ca/about/
+RedirectMatch permanent ^/contact.php http://www.terrill.ca/
 RedirectMatch permanent ^/projects.php http://www.terrill.ca/projects/
 RedirectMatch permanent ^/sorting/switching_table_rows.php http://www.terrill.ca/sorting/
 RedirectMatch permanent ^/sorting/documentation.php http://www.terrill.ca/sorting/

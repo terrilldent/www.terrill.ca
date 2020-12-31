@@ -31,7 +31,14 @@ module.exports = function( grunt ){
          
         jslint: {
             client: {
-                src: ['src/**/*.js','!src/mint/**/*'],
+                src: [
+                    'src/**/*.js',
+                    '!src/mint/**/*', 
+                    '!src/flipjs/dist/js/**/*',
+                    '!src/sorting/tsorter/src/*',
+                    '!src/sorting/tsorter/dist/*',
+                    '!src/illustrations/book/js/*'
+                ],
                 directives: { 
                     sloppy: true,
                     browser: true,
@@ -39,7 +46,7 @@ module.exports = function( grunt ){
                     plusplus: true,
                     todo: true,
                     white: true,
-                    predef: []
+                    predef: ['window']
                 },
                 options: {
                     failOnError: false
@@ -83,7 +90,7 @@ module.exports = function( grunt ){
         
         shell: {
             jekyllBuild: {
-                command: 'cd src && jekyll build && cd ..'
+                command: 'cd src && jekyll build --incremental && cd ..'
             }
         },
 

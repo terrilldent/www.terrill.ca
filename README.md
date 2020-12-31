@@ -2,7 +2,7 @@
 
 ```
 npm install
-sudo gem install jekyll --pre
+sudo gem install jekyll
 ```
 
 
