@@ -62,7 +62,9 @@ excerpt: Online TFSA contribution room calculator. See your total  contribute li
 <p>From 2013-2014 inclusive, the contribution limit was $5,500.</p>
 <p>For 2015, the contribution limit was $10,000.</p>
 <p>From 2016-2018 inclusive, the contribution limit is $5,500.</p>
-<p>From 2019, the contribution limit is $6,000.</p>
+<p>From 2019-2022 inclusive, the contribution limit is $6,000.</p>
+<p>For 2023, the contribution limit is $6,500.</p>
+<p>For 2024, the contribution limit is $7,000.</p>
 <p>Unused contributions accumulate and never expire. Withdrawals count against your contribution room the following year.</p>
 <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/cntrbtn-eng.html">CRA TFSA Information</a></p>
 <p><a target="_blank" href="http://www.cra-arc.gc.ca/tx/ndvdls/tpcs/tfsa-celi/xmpl-eng.html">Contribution Room Examples</a></p>
@@ -111,10 +113,22 @@ var tfsa = (function(){
             room += 5500 * lessthanTarget;
         }
 
-        var now = (new Date()).getFullYear();
-        lessthanTarget = now - Math.max( turned18, 2019 ) + 1;
+        start = Math.max( turned18, 2019 );
+        lessthanTarget = 2022 - start + 1;
         if( lessthanTarget > 0 ){
-            room += 6000 * lessthanTarget
+            room += 6000 * lessthanTarget;
+        }
+
+        start = Math.max( turned18, 2023 );
+        lessthanTarget = 2023 - start + 1;
+        if( lessthanTarget > 0 ){
+            room += 6500 * lessthanTarget;
+        }
+
+        var now = (new Date()).getFullYear();
+        lessthanTarget = now - Math.max( turned18, 2024 ) + 1;
+        if( lessthanTarget > 0 ){
+            room += 7000 * lessthanTarget
         }
 
         eighteen.textContent = turned18;
@@ -132,7 +146,7 @@ var tfsa = (function(){
                 option,
                 i;
 
-            for( i = 1900; i < 2019; i++ ){
+            for( i = 1900; i < 2023; i++ ){
                 option = doc.createElement('option');
                 option.value = i;
                 option.textContent = i;
